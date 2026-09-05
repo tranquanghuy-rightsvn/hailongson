@@ -490,13 +490,15 @@ div.load_page_video .pagination{
 
 @media screen and (max-width:960px){
   #header{ background:none; min-height:auto; padding:10px; }
-  #header a.logo img{ max-height:100px; width:auto; margin:0 auto; }
-  #header a.logo2 img{ left:5px; max-height:110px; }
+  #header a.logo img{ max-height:100px; width:80%; float:right; margin:0; }
+  #header a.logo2 img{ left:5px; max-height:120px; }
   p.hotline{
-    position:absolute; top:auto; bottom:3px; right:5px;
-    background:none; padding:0; align-items:center;
+    position:absolute; top:auto; bottom:0; right:5px;
+    font-size:14px;
+    background:none; padding:3px 0; padding-left:0;
   }
-  p.hotline > span{ flex-direction:row; padding-left:5px; }
+  p.hotline > span{ flex-direction:row; padding-left:5px; font-size:17px; }
+  p.hotline i{ font-size:17px; }
   p.hotline i:not(:first-child)::before{ content:'-'; padding:0 5px; }
 
   .hien_menu{ display:block; }
