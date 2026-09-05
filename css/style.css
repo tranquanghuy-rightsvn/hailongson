@@ -86,9 +86,10 @@ p.hotline i{ font-style:normal; color:#ffff00; font-size:20px; text-align:left; 
   line-height:37px;
   margin-top:-37px;
   margin-right:70px;
+  float:right;
   z-index:50;
 }
-#menu::after{ content:''; display:block; clear:both; }
+#wap_menu::after{ content:''; display:block; clear:both; }
 #menu > li{ float:left; position:relative; z-index:50; }
 #menu > li.line{ background:url('../images/menu_gach.png') center no-repeat; height:37px; width:1px; }
 #menu li a{
@@ -162,8 +163,8 @@ p.hotline i{ font-style:normal; color:#ffff00; font-size:20px; text-align:left; 
 /* ============ Hero slider ============ */
 #slider{
   position:relative;
-  margin:auto;
-  margin-top:-34px;
+  margin:-34px auto 0;
+  width:100%;
   max-width:1349px;
   overflow:hidden;
   z-index:1;
