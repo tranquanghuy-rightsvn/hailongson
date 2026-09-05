@@ -165,6 +165,7 @@ p.hotline i{ font-style:normal; color:#ffff00; font-size:20px; text-align:left; 
   margin:auto;
   margin-top:-34px;
   max-width:1349px;
+  overflow:hidden;
   z-index:1;
 }
 #slider .slides{
