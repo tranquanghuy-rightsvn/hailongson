@@ -261,20 +261,9 @@ p.hotline{bottom:-6px;}
 .main-slide {cursor: move;width: 100%; height: 450px;overflow: hidden;}
 .main-slide-content {position: relative;max-width: 100%; height: 450px;}
 #slider .flexslider .slides li{height:450px;overflow:hidden;}
-.slider-img {width:100%;height:450px;max-width:100% !important;object-fit:cover;object-position:center 50%;display:block;}
-
-/* Diem nhan cat anh rieng cho tung slide (thu tu khop voi index.html) - anh goc khong bi thay doi, chi crop hien thi */
-#slider .slides li:nth-child(1) .slider-img{object-position:center 45%;}
-#slider .slides li:nth-child(2) .slider-img{object-position:center 55%;}
-#slider .slides li:nth-child(3) .slider-img{object-position:center 60%;}
-#slider .slides li:nth-child(4) .slider-img{object-position:center 45%;}
-#slider .slides li:nth-child(5) .slider-img{object-position:center 45%;}
-#slider .slides li:nth-child(6) .slider-img{object-position:center 55%;}
-#slider .slides li:nth-child(7) .slider-img{object-position:center 55%;}
-#slider .slides li:nth-child(8) .slider-img{object-position:center 40%;}
-#slider .slides li:nth-child(9) .slider-img{object-position:center 50%;}
-#slider .slides li:nth-child(10) .slider-img{object-position:center 55%;}
-#slider .slides li:nth-child(11) .slider-img{object-position:center 40%;}
+.slider-img {width:100%;height:450px;max-width:100% !important;object-fit:cover;object-position:center center;display:block;}
+/* Anh slider da duoc crop san (images/sites/banner/) theo bo cuc rieng tung anh, nguoi luon nam giua khung -
+   khong can chinh object-position rieng cho tung slide nua. */
 
 /* Nut next/prev cho banner - flexslider mac dinh an (.flex-direction-nav{display:none}) va dung font icon
    rieng khong ton tai trong project nen phai bat lai + doi sang FontAwesome da co san */
