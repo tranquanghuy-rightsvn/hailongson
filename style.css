@@ -408,3 +408,67 @@ a.hotline-btn .hotline-label{font-size:9px;}
 a.hotline-btn .hotline-number{font-size:12px;}
 }
 }
+
+/* ===== Fixed max-width on wide screens: header/logo/content stop growing past this cap ===== */
+div#header,div#wap_menu,div#slider,div#wapper,div#wap_footer,div#wap_doitac{max-width:1600px;}
+
+/* ===== Hải Long Sơn content components (about/services/contact/recruitment pages) ===== */
+.hls-card{background:rgba(0,0,0,0.28);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:18px 22px;margin-bottom:18px;box-sizing:border-box;}
+.hls-card h3{color:#ffea00;font-size:18px;margin-bottom:12px;text-transform:uppercase;font-family:'myFont';letter-spacing:0.3px;}
+.hls-card p{margin-bottom:10px;line-height:1.7;text-align:justify;}
+.hls-intro-grid{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;}
+.hls-intro-grid .hls-intro-text{flex:1 1 420px;}
+.hls-intro-grid .hls-intro-img{flex:0 1 300px;}
+.hls-intro-grid .hls-intro-img img{width:100%;border-radius:8px;border:1px solid rgba(255,255,255,0.2);}
+.hls-info-table{width:100%;border-collapse:collapse;}
+.hls-info-table td{padding:7px 10px;border-bottom:1px dashed rgba(255,255,255,0.18);vertical-align:top;font-size:14px;}
+.hls-info-table td:first-child{color:#ffea00;width:230px;font-weight:bold;white-space:nowrap;}
+.hls-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.hls-badge{background:#1c2a52;border:1px solid #2f356b;border-radius:6px;padding:8px 14px;font-size:13px;}
+.hls-grid-2{display:flex;flex-wrap:wrap;gap:18px;}
+.hls-grid-2>div{flex:1 1 300px;}
+.hls-list{margin:0;padding-left:20px;line-height:1.8;}
+.hls-list li{margin-bottom:4px;}
+.hls-img-full{width:100%;border-radius:8px;border:1px solid rgba(255,255,255,0.15);margin-top:8px;}
+.hls-stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;}
+.hls-stat{flex:1 1 140px;background:#1c2a52;border:1px solid #2f356b;border-radius:8px;padding:14px;text-align:center;}
+.hls-stat b{display:block;color:#ffea00;font-size:26px;font-family:'myFont';}
+.hls-stat span{font-size:12px;color:#ccc;text-transform:uppercase;}
+@media screen and (max-width:768px){
+.hls-info-table td{display:block;width:100%!important;white-space:normal;}
+.hls-info-table td:first-child{border-bottom:none;padding-bottom:0;}
+}
+
+/* ===== Footer redesign: card panels, cleaner stats list, no content changes ===== */
+div#wap_footer{padding:28px 20px 16px;box-sizing:border-box;}
+div#footer{display:flex;flex-wrap:wrap;gap:20px;align-items:stretch;}
+div#main_footer,div#thongke{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:10px;padding:20px 24px;box-sizing:border-box;float:none;}
+div#main_footer{width:62%;flex:1 1 380px;}
+div#thongke{width:34%;flex:1 1 260px;display:flex;flex-direction:column;}
+div#main_footer p{margin:0 0 10px !important;}
+div#main_footer p:first-child{padding-bottom:12px;margin-bottom:14px !important;border-bottom:1px solid rgba(255,255,255,0.14);}
+div#main_footer p:nth-child(2),div#main_footer p:nth-child(3){font-size:13px !important;}
+div#main_footer p:last-child{margin-bottom:0 !important;opacity:0.65;}
+div#thongke .thongke_an{flex:1;}
+div#thongke ul{list-style:none;margin:0;padding:0;}
+div#thongke ul li{display:flex;align-items:center;gap:10px;clear:none;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.12);font-size:13px;}
+div#thongke ul li:last-child{border-bottom:none;}
+div#thongke ul li img{float:none;margin-right:0;width:16px;opacity:0.8;}
+div#thongke ul li span{margin-left:auto;color:#ffea00;font-weight:bold;font-family:'myFont';}
+div#thongke>p{margin:14px 0 0;padding-top:12px;border-top:1px solid rgba(255,255,255,0.14);font-size:12px;color:#aaa;text-align:center;}
+@media screen and (max-width:768px){
+div#main_footer,div#thongke{width:100%;}
+}
+
+/* ===== Partner logos: white tiles for consistent contrast, same logos/content =====
+   NOTE: keep div#doitac itself in normal flow (no display:flex) - the mmenu mobile-menu
+   plugin clones/moves page markup at runtime and interacts badly with flex on this
+   particular container, causing runaway height. Style the anchor tags instead. */
+div#wap_doitac{background:rgba(0,0,0,0.12);}
+div#doitac{text-align:center;}
+div#doitac a{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;padding:8px 16px;margin:6px;box-shadow:0 2px 8px rgba(0,0,0,0.25);vertical-align:middle;transition:transform 0.25s,box-shadow 0.25s;}
+div#doitac a:hover{transform:translateY(-3px);box-shadow:0 6px 14px rgba(0,0,0,0.35);}
+div#doitac a img{height:46px !important;margin:0 !important;max-width:150px;width:auto !important;object-fit:contain;}
+@media screen and (max-width:460px){
+div#doitac a img{height:34px !important;max-width:110px;}
+}
