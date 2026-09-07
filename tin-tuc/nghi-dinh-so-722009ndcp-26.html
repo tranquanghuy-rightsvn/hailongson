@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /> 
 <meta name="google-site-verification" content="HvkqHYggwl_KGxnV2tb3GKvXTgw7rI_Ee0xLyHF3_9s" />
-<link rel="canonical" href="../index.html" />
+<link rel="canonical" href="../index" />
 <!--Meta facebook-->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -189,8 +189,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div id="header">
     
-<a href="../index.html" class="logo">CÔNG TY TNHH DV BẢO VỆ CHUYÊN NGHIỆP<br><span class="logo-brand">HẢI LONG SƠN</span></a>
-<a href="../index.html" class="logo2"><img src="../images/logo-tron.png" /></a>
+<a href="../index" class="logo">CÔNG TY TNHH DV BẢO VỆ CHUYÊN NGHIỆP<br><span class="logo-brand">HẢI LONG SƠN</span></a>
+<a href="../index" class="logo2"><img src="../images/logo-tron.png" /></a>
 <a href="tel:0973026960" class="hotline-btn"><i class="fa fa-phone"></i><span class="hotline-text"><span class="hotline-label">HOTLINE Mr. Thái</span><span class="hotline-number">0973 026 960</span></span></a>
 
 
@@ -219,38 +219,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!--Hover menu-->
 
 <ul>    
-    <li><a class="" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+    <li><a class="" href="../index"><i class="fa fa-home" aria-hidden="true"></i></a></li>
     <li class="line"></li>
-    <li><a class="" href="../gioi-thieu.html">Giới thiệu</a></li>
+    <li><a class="" href="../gioi-thieu">Giới thiệu</a></li>
     <li class="line"></li>
-    <li><a class="" href="../dich-vu.html">Dịch vụ</a>
+    <li><a class="" href="../dich-vu">Dịch vụ</a>
         <ul>
-                        <li><a href="../dich-vu/bao-ve-ho-tong-ca-nhan-11.html">Bảo vệ hộ tống cá nhân</a>
+                        <li><a href="../dich-vu/bao-ve-ho-tong-ca-nhan-11">Bảo vệ hộ tống cá nhân</a>
                 <ul>
                                                                   </ul>
                 </li>
-                            <li><a href="../dich-vu/bao-ve-van-chuyen-2.html">Bảo vệ vận chuyển</a>
+                            <li><a href="../dich-vu/bao-ve-van-chuyen-2">Bảo vệ vận chuyển</a>
                 <ul>
                                                                   </ul>
                 </li>
-                            <li><a href="../dich-vu/bao-ve-tai-san-7.html">Bảo vệ tài sản</a>
+                            <li><a href="../dich-vu/bao-ve-tai-san-7">Bảo vệ tài sản</a>
                 <ul>
                                                                   </ul>
                 </li>
-                            <li><a href="../dich-vu/bao-ve-su-kien-1.html">Bảo vệ sự kiện</a>
+                            <li><a href="../dich-vu/bao-ve-su-kien-1">Bảo vệ sự kiện</a>
                 <ul>
                                                                   </ul>
                 </li>
                             </ul>   
     </li>
     <li class="line"></li>
-     <li><a class="" href="../thu-vien-anh.html">Thư viện ảnh</a></li>
+     <li><a class="" href="../thu-vien-anh">Thư viện ảnh</a></li>
     <li class="line"></li>
-    <li><a class="active" href="../tin-tuc.html">Tin tức</a></li>
+    <li><a class="active" href="../tin-tuc">Tin tức</a></li>
     <li class="line"></li>
-    <li><a class="" href="../tuyen-dung.html">Tuyển dụng</a></li>
+    <li><a class="" href="../tuyen-dung">Tuyển dụng</a></li>
     <li class="line"></li>
-    <li><a style="border:none;" class="" href="../lien-he.html">Liên hệ</a></li>
+    <li><a style="border:none;" class="" href="../lien-he">Liên hệ</a></li>
     </ul>    </div>
 </div>
 </div>
@@ -283,10 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$('.hien_menu').click(function(){
-			$('nav#menu_mobi').css({height: "auto"});
-		});
-		$('nav#menu_mobi').mmenu({
+		var hlsMmenuApi = $('nav#menu_mobi').mmenu({
 			extensions	: [ 'effect-slide-menu', 'pageshadow' ],
 			searchfield	: true,
 			counters	: true,
@@ -313,45 +310,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				}
 			]
 		});
+		}).data('mmenu');
+		$('.hien_menu').click(function(e){
+			e.preventDefault();
+			hlsMmenuApi.open();
+		});
 	});
 </script>
 
-<div class="header"><a href="../index.html#menu_mobi" class="hien_menu"><i class="fa fa-bars" aria-hidden="true"></i>Menu</a>
+<div class="header"><a href="../index#menu_mobi" class="hien_menu"><i class="fa fa-bars" aria-hidden="true"></i>Menu</a>
 </div> 
-<nav id="menu_mobi" style="height:0; overflow:hidden;">
+<nav id="menu_mobi">
     <ul>	
-    	<li><a class="" href="../index.html">Trang chủ</a></li>
+    	<li><a class="" href="../index">Trang chủ</a></li>
         
-        <li><a class="" href="../gioi-thieu.html">Giới thiệu</a></li>
+        <li><a class="" href="../gioi-thieu">Giới thiệu</a></li>
         
-        <li><a class="" href="../dich-vu.html">Dịch vụ</a>
+        <li><a class="" href="../dich-vu">Dịch vụ</a>
             <ul>
-                                <li><a href="../dich-vu/bao-ve-ho-tong-ca-nhan-11.html">Bảo vệ hộ tống cá nhân</a>
+                                <li><a href="../dich-vu/bao-ve-ho-tong-ca-nhan-11">Bảo vệ hộ tống cá nhân</a>
                     <ul>
                                                                               </ul>
                     </li>
-                                    <li><a href="../dich-vu/bao-ve-van-chuyen-2.html">Bảo vệ vận chuyển</a>
+                                    <li><a href="../dich-vu/bao-ve-van-chuyen-2">Bảo vệ vận chuyển</a>
                     <ul>
                                                                               </ul>
                     </li>
-                                    <li><a href="../dich-vu/bao-ve-tai-san-7.html">Bảo vệ tài sản</a>
+                                    <li><a href="../dich-vu/bao-ve-tai-san-7">Bảo vệ tài sản</a>
                     <ul>
                                                                               </ul>
                     </li>
-                                    <li><a href="../dich-vu/bao-ve-su-kien-1.html">Bảo vệ sự kiện</a>
+                                    <li><a href="../dich-vu/bao-ve-su-kien-1">Bảo vệ sự kiện</a>
                     <ul>
                                                                               </ul>
                     </li>
                                     </ul>	
         </li>
         
-         <li><a class="" href="../thu-vien-anh.html">Thư viện ảnh</a></li>
+         <li><a class="" href="../thu-vien-anh">Thư viện ảnh</a></li>
         
-        <li><a class="active" href="../tin-tuc.html">Tin tức</a></li>
+        <li><a class="active" href="../tin-tuc">Tin tức</a></li>
         
-        <li><a class="" href="../tuyen-dung.html">Tuyển dụng</a></li>
+        <li><a class="" href="../tuyen-dung">Tuyển dụng</a></li>
         
-        <li><a style="border:none;" class="" href="../lien-he.html">Liên hệ</a></li>
+        <li><a style="border:none;" class="" href="../lien-he">Liên hệ</a></li>
     </ul>
 </nav></div>
 
@@ -650,16 +652,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="othernews">
              <div class="cactinkhac">Các bài khác</div>
              <ul class="phantrang">
-                                    <li><a href="bao-ve-long-hai-11.html" title="BẢO VỆ LONG HẢI">BẢO VỆ LONG HẢI</a> (30.05.2015)</li>
-                                    <li><a href="thong-tu-so-452009ttbcac11-25.html" title="THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)">THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)</a> (13.10.2016)</li>
-                                    <li><a href="luat-so-402013qh13-sua-doi-bo-sung-mot-so-dieu-cua-luat-pccc-so-272001qh10-24.html" title="Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10">Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10</a> (13.10.2016)</li>
-                                    <li><a href="nghi-dinh-chinh-phu-so-062013ndcp-ve-bao-ve-co-quan-doanh-nghiep-23.html" title="NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP">NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP</a> (13.10.2016)</li>
-                                    <li><a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-22.html" title="LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP">LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP</a> (13.10.2016)</li>
-                                    <li><a href="cach-su-dung-bo-dam-thong-dung-cach-sac-pin-21.html" title="CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN">CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN</a> (13.10.2016)</li>
-                                    <li><a href="luat-pccc-so-272001qh10-20.html" title="LUẬT PCCC SỐ 27/2001/QH10">LUẬT PCCC SỐ 27/2001/QH10</a> (13.10.2016)</li>
+                                    <li><a href="bao-ve-long-hai-11" title="BẢO VỆ LONG HẢI">BẢO VỆ LONG HẢI</a> (30.05.2015)</li>
+                                    <li><a href="thong-tu-so-452009ttbcac11-25" title="THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)">THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)</a> (13.10.2016)</li>
+                                    <li><a href="luat-so-402013qh13-sua-doi-bo-sung-mot-so-dieu-cua-luat-pccc-so-272001qh10-24" title="Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10">Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10</a> (13.10.2016)</li>
+                                    <li><a href="nghi-dinh-chinh-phu-so-062013ndcp-ve-bao-ve-co-quan-doanh-nghiep-23" title="NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP">NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP</a> (13.10.2016)</li>
+                                    <li><a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-22" title="LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP">LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP</a> (13.10.2016)</li>
+                                    <li><a href="cach-su-dung-bo-dam-thong-dung-cach-sac-pin-21" title="CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN">CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN</a> (13.10.2016)</li>
+                                    <li><a href="luat-pccc-so-272001qh10-20" title="LUẬT PCCC SỐ 27/2001/QH10">LUẬT PCCC SỐ 27/2001/QH10</a> (13.10.2016)</li>
                              </ul> 
              <div class="pagination">
-<ul class="pages"><li><a href="nghi-dinh-so-722009ndcp-26.html" class="left">First</a><li><li><a href='../index.html#' class='active'>1</a></li><li><a href = 'nghi-dinh-so-722009ndcp-26.html'>2</a></li><li><a href="nghi-dinh-so-722009ndcp-26.html" class="right">End</a></li></ul></div> 
+<ul class="pages"><li><a href="nghi-dinh-so-722009ndcp-26" class="left">First</a><li><li><a href='../index.html#' class='active'>1</a></li><li><a href = 'nghi-dinh-so-722009ndcp-26.html'>2</a></li><li><a href="nghi-dinh-so-722009ndcp-26" class="right">End</a></li></ul></div> 
         </div><!--.othernews-->
         
              
@@ -1381,138 +1383,138 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     	<div class="tieude_giua">Tin tức sự kiện</div>
         <ul>
                             <li>
-                    <a href="cong-ty-long-hai-to-chuc-dao-tao-nang-cao-nghiep-vu-bao-ve-cho-nhan-vien-67.html"><img src="../upload/news/dao-tao-nghiep-vu-2024-16775_170x127.jpeg" alt="Công ty Long Hải Tổ Chức Đào Tạo Nâng Cao Nghiệp Vụ Bảo Vệ Cho Nhân Viên" /></a>
-                    <h4><a href="cong-ty-long-hai-to-chuc-dao-tao-nang-cao-nghiep-vu-bao-ve-cho-nhan-vien-67.html">Công ty Long Hải Tổ Chức Đào Tạo Nâng Cao Nghiệp Vụ Bảo Vệ Cho Nhân Viên</a></h4>
+                    <a href="cong-ty-long-hai-to-chuc-dao-tao-nang-cao-nghiep-vu-bao-ve-cho-nhan-vien-67"><img src="../upload/news/dao-tao-nghiep-vu-2024-16775_170x127.jpeg" alt="Công ty Long Hải Tổ Chức Đào Tạo Nâng Cao Nghiệp Vụ Bảo Vệ Cho Nhân Viên" /></a>
+                    <h4><a href="cong-ty-long-hai-to-chuc-dao-tao-nang-cao-nghiep-vu-bao-ve-cho-nhan-vien-67">Công ty Long Hải Tổ Chức Đào Tạo Nâng Cao Nghiệp Vụ Bảo Vệ Cho Nhân Viên</a></h4>
                     <p class="mota"> Nhằm nâng cao nghiệp vụ và chất lượng dịch vụ bảo vệ, Công ty Long Hải đã phối hợp cùng Công...</p>
                 </li>
                             <li>
-                    <a href="bao-ve-su-kien-49.html"><img src="../upload/news/4e72e6c97ede9180c8cf9857_170x128.jpg" alt="Bảo vệ sự kiện" /></a>
-                    <h4><a href="bao-ve-su-kien-49.html">Bảo vệ sự kiện</a></h4>
+                    <a href="bao-ve-su-kien-49"><img src="../upload/news/4e72e6c97ede9180c8cf9857_170x128.jpg" alt="Bảo vệ sự kiện" /></a>
+                    <h4><a href="bao-ve-su-kien-49">Bảo vệ sự kiện</a></h4>
                     <p class="mota"> Bảo vệ sự kiện</p>
                 </li>
                             <li>
-                    <a href="vai-tro-nha-lanh-dao-trong-viec-dan-dat-tap-the-48.html"><img src="../upload/news/27630_170x91.jpg" alt="Vai trò nhà lãnh đạo trong việc dẫn dắt tập thể" /></a>
-                    <h4><a href="vai-tro-nha-lanh-dao-trong-viec-dan-dat-tap-the-48.html">Vai trò nhà lãnh đạo trong việc dẫn dắt tập thể</a></h4>
+                    <a href="vai-tro-nha-lanh-dao-trong-viec-dan-dat-tap-the-48"><img src="../upload/news/27630_170x91.jpg" alt="Vai trò nhà lãnh đạo trong việc dẫn dắt tập thể" /></a>
+                    <h4><a href="vai-tro-nha-lanh-dao-trong-viec-dan-dat-tap-the-48">Vai trò nhà lãnh đạo trong việc dẫn dắt tập thể</a></h4>
                     <p class="mota"> Vai trò nhà lãnh đạo trong việc dẫn dắt tập thể</p>
                 </li>
                             <li>
-                    <a href="nguoi-bao-ve-45.html"><img src="../upload/news/e2945f0af64f14114d5e9095_98x130.jpg" alt="Người bảo vệ" /></a>
-                    <h4><a href="nguoi-bao-ve-45.html">Người bảo vệ</a></h4>
+                    <a href="nguoi-bao-ve-45"><img src="../upload/news/e2945f0af64f14114d5e9095_98x130.jpg" alt="Người bảo vệ" /></a>
+                    <h4><a href="nguoi-bao-ve-45">Người bảo vệ</a></h4>
                     <p class="mota"> Bảo vệ, cái tên của một nghề, một hành động chống lại sự hủy hoại, xâm phạm để giữ cho...</p>
                 </li>
                             <li>
-                    <a href="binh-xit-hoi-cay-va-cach-bao-quan-63.html"><img src="../upload/news/images2624_130x130.jpg" alt="BÌNH XỊT HƠI CAY VÀ CÁCH BẢO QUẢN" /></a>
-                    <h4><a href="binh-xit-hoi-cay-va-cach-bao-quan-63.html">BÌNH XỊT HƠI CAY VÀ CÁCH BẢO QUẢN</a></h4>
+                    <a href="binh-xit-hoi-cay-va-cach-bao-quan-63"><img src="../upload/news/images2624_130x130.jpg" alt="BÌNH XỊT HƠI CAY VÀ CÁCH BẢO QUẢN" /></a>
+                    <h4><a href="binh-xit-hoi-cay-va-cach-bao-quan-63">BÌNH XỊT HƠI CAY VÀ CÁCH BẢO QUẢN</a></h4>
                     <p class="mota"> Bình xịt hơi cay</p>
                 </li>
                             <li>
-                    <a href="thong-tu-172018ttbca-59.html"><img src="../upload/news/tai-xuong-(1)0530_170x113.jpg" alt="THÔNG TƯ 17/2018/TT-BCA" /></a>
-                    <h4><a href="thong-tu-172018ttbca-59.html">THÔNG TƯ 17/2018/TT-BCA</a></h4>
+                    <a href="thong-tu-172018ttbca-59"><img src="../upload/news/tai-xuong-(1)0530_170x113.jpg" alt="THÔNG TƯ 17/2018/TT-BCA" /></a>
+                    <h4><a href="thong-tu-172018ttbca-59">THÔNG TƯ 17/2018/TT-BCA</a></h4>
                     <p class="mota"> QUY ĐỊNH VỀ TRANG BỊ VŨ KHÍ, VẬT LIỆU NỔ QUÂN DỤNG, CÔNG CỤ HỖ TRỢ</p>
                 </li>
                             <li>
-                    <a href="loi-khuyen-an-toan-phong-chay-chua-chay-danh-cho-cac-ban-o-chung-cu-58.html"><img src="../upload/news/huong-dan-an-toan-phong-chay-chua-chay-32079_157x130.jpg" alt="Lời khuyên an toàn phòng cháy chữa cháy dành cho các bạn ở chung cư" /></a>
-                    <h4><a href="loi-khuyen-an-toan-phong-chay-chua-chay-danh-cho-cac-ban-o-chung-cu-58.html">Lời khuyên an toàn phòng cháy chữa cháy dành cho các bạn ở chung cư</a></h4>
+                    <a href="loi-khuyen-an-toan-phong-chay-chua-chay-danh-cho-cac-ban-o-chung-cu-58"><img src="../upload/news/huong-dan-an-toan-phong-chay-chua-chay-32079_157x130.jpg" alt="Lời khuyên an toàn phòng cháy chữa cháy dành cho các bạn ở chung cư" /></a>
+                    <h4><a href="loi-khuyen-an-toan-phong-chay-chua-chay-danh-cho-cac-ban-o-chung-cu-58">Lời khuyên an toàn phòng cháy chữa cháy dành cho các bạn ở chung cư</a></h4>
                     <p class="mota"> Cháy...Không có thời gian để dừng lại...</p>
                 </li>
                             <li>
-                    <a href="khong-phai-chat-long-cung-chang-phai-chat-ran-hay-khi-lua-ton-tai-duoi-the-gi-55.html"><img src="../upload/news/photo-1-15510842340831735912341-crop-155108425548916483558800763_170x106.jpg" alt="Không phải chất lỏng cũng chẳng phải chất rắn hay khí, lửa tồn tại dưới thể gì?" /></a>
-                    <h4><a href="khong-phai-chat-long-cung-chang-phai-chat-ran-hay-khi-lua-ton-tai-duoi-the-gi-55.html">Không phải chất lỏng cũng chẳng phải chất rắn hay khí, lửa tồn tại dưới thể gì?</a></h4>
+                    <a href="khong-phai-chat-long-cung-chang-phai-chat-ran-hay-khi-lua-ton-tai-duoi-the-gi-55"><img src="../upload/news/photo-1-15510842340831735912341-crop-155108425548916483558800763_170x106.jpg" alt="Không phải chất lỏng cũng chẳng phải chất rắn hay khí, lửa tồn tại dưới thể gì?" /></a>
+                    <h4><a href="khong-phai-chat-long-cung-chang-phai-chat-ran-hay-khi-lua-ton-tai-duoi-the-gi-55">Không phải chất lỏng cũng chẳng phải chất rắn hay khí, lửa tồn tại dưới thể gì?</a></h4>
                     <p class="mota"> Lửa rõ ràng là một loại vật chất</p>
                 </li>
                             <li>
-                    <a href="10-dieu-can-biet-de-an-toan-khi-xay-ra-chay-no-tai-chung-cu-54.html"><img src="../upload/news/114615_170x95.jpg" alt="10 ĐIỀU CẦN BIẾT ĐỂ AN TOÀN KHI XẢY RA CHÁY NỔ TẠI CHUNG CƯ" /></a>
-                    <h4><a href="10-dieu-can-biet-de-an-toan-khi-xay-ra-chay-no-tai-chung-cu-54.html">10 ĐIỀU CẦN BIẾT ĐỂ AN TOÀN KHI XẢY RA CHÁY NỔ TẠI CHUNG CƯ</a></h4>
+                    <a href="10-dieu-can-biet-de-an-toan-khi-xay-ra-chay-no-tai-chung-cu-54"><img src="../upload/news/114615_170x95.jpg" alt="10 ĐIỀU CẦN BIẾT ĐỂ AN TOÀN KHI XẢY RA CHÁY NỔ TẠI CHUNG CƯ" /></a>
+                    <h4><a href="10-dieu-can-biet-de-an-toan-khi-xay-ra-chay-no-tai-chung-cu-54">10 ĐIỀU CẦN BIẾT ĐỂ AN TOÀN KHI XẢY RA CHÁY NỔ TẠI CHUNG CƯ</a></h4>
                     <p class="mota"> KIẾN THỨC VỀ CHÁY NỔ TẠI CHUNG CƯ BẠN NÊN BIẾT:</p>
                 </li>
                             <li>
-                    <a href="canh-sat-pccc-khuyen-gi-ve-cach-thoat-nan-khi-chay-nha-cao-tang-53.html"><img src="../upload/news/88508_170x113.jpg" alt=" CẢNH SÁT PCCC KHUYÊN GÌ VỀ CÁCH THOÁT NẠN KHI CHÁY NHÀ CAO TẦNG?" /></a>
-                    <h4><a href="canh-sat-pccc-khuyen-gi-ve-cach-thoat-nan-khi-chay-nha-cao-tang-53.html"> CẢNH SÁT PCCC KHUYÊN GÌ VỀ CÁCH THOÁT NẠN KHI CHÁY NHÀ CAO TẦNG?</a></h4>
+                    <a href="canh-sat-pccc-khuyen-gi-ve-cach-thoat-nan-khi-chay-nha-cao-tang-53"><img src="../upload/news/88508_170x113.jpg" alt=" CẢNH SÁT PCCC KHUYÊN GÌ VỀ CÁCH THOÁT NẠN KHI CHÁY NHÀ CAO TẦNG?" /></a>
+                    <h4><a href="canh-sat-pccc-khuyen-gi-ve-cach-thoat-nan-khi-chay-nha-cao-tang-53"> CẢNH SÁT PCCC KHUYÊN GÌ VỀ CÁCH THOÁT NẠN KHI CHÁY NHÀ CAO TẦNG?</a></h4>
                     <p class="mota"> Tuyệt đối không dùng thang máy, không chạy lên các tầng cao hơn và dùng băng dính dán hoặc vải vóc...</p>
                 </li>
                             <li>
-                    <a href="nhung-bien-phap-phong-chay-chua-chay-co-ban-52.html"><img src="../upload/news/40144_170x106.jpg" alt="NHỮNG BIỆN PHÁP PHÒNG CHÁY CHỮA CHÁY CƠ BẢN" /></a>
-                    <h4><a href="nhung-bien-phap-phong-chay-chua-chay-co-ban-52.html">NHỮNG BIỆN PHÁP PHÒNG CHÁY CHỮA CHÁY CƠ BẢN</a></h4>
+                    <a href="nhung-bien-phap-phong-chay-chua-chay-co-ban-52"><img src="../upload/news/40144_170x106.jpg" alt="NHỮNG BIỆN PHÁP PHÒNG CHÁY CHỮA CHÁY CƠ BẢN" /></a>
+                    <h4><a href="nhung-bien-phap-phong-chay-chua-chay-co-ban-52">NHỮNG BIỆN PHÁP PHÒNG CHÁY CHỮA CHÁY CƠ BẢN</a></h4>
                     <p class="mota"> NHỮNG BIỆN PHÁP PHÒNG CHÁY CHỮA CHÁY CƠ BẢN</p>
                 </li>
                             <li>
-                    <a href="phuong-phap-phong-chay-chua-chay-doi-voi-ho-gia-dinh-51.html"><img src="../upload/news/39700_126x130.jpg" alt="PHƯƠNG PHÁP PHÒNG CHÁY CHỮA CHÁY ĐỐI VỚI HỘ GIA ĐÌNH" /></a>
-                    <h4><a href="phuong-phap-phong-chay-chua-chay-doi-voi-ho-gia-dinh-51.html">PHƯƠNG PHÁP PHÒNG CHÁY CHỮA CHÁY ĐỐI VỚI HỘ GIA ĐÌNH</a></h4>
+                    <a href="phuong-phap-phong-chay-chua-chay-doi-voi-ho-gia-dinh-51"><img src="../upload/news/39700_126x130.jpg" alt="PHƯƠNG PHÁP PHÒNG CHÁY CHỮA CHÁY ĐỐI VỚI HỘ GIA ĐÌNH" /></a>
+                    <h4><a href="phuong-phap-phong-chay-chua-chay-doi-voi-ho-gia-dinh-51">PHƯƠNG PHÁP PHÒNG CHÁY CHỮA CHÁY ĐỐI VỚI HỘ GIA ĐÌNH</a></h4>
                     <p class="mota"> PHƯƠNG PHÁP PHÒNG CHÁY CHỮA CHÁY ĐỐI VỚI HỘ GIA ĐÌNH</p>
                 </li>
                             <li>
-                    <a href="nghi-dinh-962016-46.html"><img src="../upload/news/14538_170x113.jpg" alt="Nghị định 96/2016" /></a>
-                    <h4><a href="nghi-dinh-962016-46.html">Nghị định 96/2016</a></h4>
+                    <a href="nghi-dinh-962016-46"><img src="../upload/news/14538_170x113.jpg" alt="Nghị định 96/2016" /></a>
+                    <h4><a href="nghi-dinh-962016-46">Nghị định 96/2016</a></h4>
                     <p class="mota"> Nghị định 96/2016</p>
                 </li>
                             <li>
-                    <a href="thu-cam-on-cua-khach-hang-33.html"><img src="../upload/news/images1189377_ca5835_170x65.jpg" alt="THƯ CẢM ƠN CỦA KHÁCH HÀNG" /></a>
-                    <h4><a href="thu-cam-on-cua-khach-hang-33.html">THƯ CẢM ƠN CỦA KHÁCH HÀNG</a></h4>
+                    <a href="thu-cam-on-cua-khach-hang-33"><img src="../upload/news/images1189377_ca5835_170x65.jpg" alt="THƯ CẢM ƠN CỦA KHÁCH HÀNG" /></a>
+                    <h4><a href="thu-cam-on-cua-khach-hang-33">THƯ CẢM ƠN CỦA KHÁCH HÀNG</a></h4>
                     <p class="mota"> Công ty Cổ phần Du lịch và Tiếp thị Giao thông Vận tải Việt Nam - Vietravel đã gởi lời cảm ơn...</p>
                 </li>
                             <li>
-                    <a href="huong-dan-hoi-suc-tim-phoi-32.html"><img src="../upload/news/22153353220720166469_170x114.png" alt="HƯỚNG DẪN HỒI SỨC TIM - PHỔI" /></a>
-                    <h4><a href="huong-dan-hoi-suc-tim-phoi-32.html">HƯỚNG DẪN HỒI SỨC TIM - PHỔI</a></h4>
+                    <a href="huong-dan-hoi-suc-tim-phoi-32"><img src="../upload/news/22153353220720166469_170x114.png" alt="HƯỚNG DẪN HỒI SỨC TIM - PHỔI" /></a>
+                    <h4><a href="huong-dan-hoi-suc-tim-phoi-32">HƯỚNG DẪN HỒI SỨC TIM - PHỔI</a></h4>
                     <p class="mota"> Hồi sức tim phổi là một kỹ thuật cứu sinh hữu ích trong nhiều tình huống cấp cứu, </p>
                 </li>
                             <li>
-                    <a href="so-cuu-soc-do-dien-giat-31.html"><img src="../upload/news/949_bong-do-dien-giat7438_170x128.jpg" alt="SƠ CỨU SỐC DO ĐIỆN GIẬT" /></a>
-                    <h4><a href="so-cuu-soc-do-dien-giat-31.html">SƠ CỨU SỐC DO ĐIỆN GIẬT</a></h4>
+                    <a href="so-cuu-soc-do-dien-giat-31"><img src="../upload/news/949_bong-do-dien-giat7438_170x128.jpg" alt="SƠ CỨU SỐC DO ĐIỆN GIẬT" /></a>
+                    <h4><a href="so-cuu-soc-do-dien-giat-31">SƠ CỨU SỐC DO ĐIỆN GIẬT</a></h4>
                     <p class="mota"> Mức độ nguy hiểm do điện giật còn tùy thuộc vào loại dòng điện (một chiều hay xoay chiều), cường...</p>
                 </li>
                             <li>
-                    <a href="so-cuu-va-cham-soc-vet-thuong-phan-mem-30.html"><img src="../upload/news/20153014220720161036_170x114.png" alt="SƠ CỨU VÀ CHĂM SÓC VẾT THƯƠNG PHẦN MỀM" /></a>
-                    <h4><a href="so-cuu-va-cham-soc-vet-thuong-phan-mem-30.html">SƠ CỨU VÀ CHĂM SÓC VẾT THƯƠNG PHẦN MỀM</a></h4>
+                    <a href="so-cuu-va-cham-soc-vet-thuong-phan-mem-30"><img src="../upload/news/20153014220720161036_170x114.png" alt="SƠ CỨU VÀ CHĂM SÓC VẾT THƯƠNG PHẦN MỀM" /></a>
+                    <h4><a href="so-cuu-va-cham-soc-vet-thuong-phan-mem-30">SƠ CỨU VÀ CHĂM SÓC VẾT THƯƠNG PHẦN MỀM</a></h4>
                     <p class="mota"> Vết thương là sự cắt đứt hay dập rách da và tổ chức dưới da hoặc các tổ chức khác của cơ...</p>
                 </li>
                             <li>
-                    <a href="cach-ung-cuu-khi-bi-ngat-29.html"><img src="../upload/news/15152730220720163647_170x112.png" alt="CÁCH ỨNG CỨU KHI BỊ NGẠT" /></a>
-                    <h4><a href="cach-ung-cuu-khi-bi-ngat-29.html">CÁCH ỨNG CỨU KHI BỊ NGẠT</a></h4>
+                    <a href="cach-ung-cuu-khi-bi-ngat-29"><img src="../upload/news/15152730220720163647_170x112.png" alt="CÁCH ỨNG CỨU KHI BỊ NGẠT" /></a>
+                    <h4><a href="cach-ung-cuu-khi-bi-ngat-29">CÁCH ỨNG CỨU KHI BỊ NGẠT</a></h4>
                     <p class="mota"> Thời gian qua, liên tiếp những vụ hỏa hoạn, ngộ độc khí độc gây tử vong nhiều người một lúc....</p>
                 </li>
                             <li>
-                    <a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-28.html"><img src="../upload/news/1135328200720160141_170x124.png" alt="LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP" /></a>
-                    <h4><a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-28.html">LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP</a></h4>
+                    <a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-28"><img src="../upload/news/1135328200720160141_170x124.png" alt="LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP" /></a>
+                    <h4><a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-28">LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP</a></h4>
                     <p class="mota"> Nghị định này quy định về quản lý kinh doanh dịch vụ bảo vệ trong các lĩnh vực:</p>
                 </li>
                             <li>
-                    <a href="nghi-dinh-so-722009ndcp-26.html"><img src="../upload/news/3135435200720162821_170x116.png" alt="NGHỊ ĐỊNH SỐ 72/2009/NĐ-CP" /></a>
-                    <h4><a href="nghi-dinh-so-722009ndcp-26.html">NGHỊ ĐỊNH SỐ 72/2009/NĐ-CP</a></h4>
+                    <a href="nghi-dinh-so-722009ndcp-26"><img src="../upload/news/3135435200720162821_170x116.png" alt="NGHỊ ĐỊNH SỐ 72/2009/NĐ-CP" /></a>
+                    <h4><a href="nghi-dinh-so-722009ndcp-26">NGHỊ ĐỊNH SỐ 72/2009/NĐ-CP</a></h4>
                     <p class="mota"> Nghị định này quy định điều kiện về an ninh, trật tự đối với các ngành, nghề kinh doanh có...</p>
                 </li>
                             <li>
-                    <a href="thong-tu-so-452009ttbcac11-25.html"><img src="../upload/news/5135959200720168718_170x116.png" alt="THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)" /></a>
-                    <h4><a href="thong-tu-so-452009ttbcac11-25.html">THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)</a></h4>
+                    <a href="thong-tu-so-452009ttbcac11-25"><img src="../upload/news/5135959200720168718_170x116.png" alt="THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)" /></a>
+                    <h4><a href="thong-tu-so-452009ttbcac11-25">THÔNG TƯ SỐ: 45/2009/TT-BCA(C11)</a></h4>
                     <p class="mota"> HƯỚNG DẪN THI HÀNH MỘT SỐ ĐIỀU TRONG NGHỊ ĐINH SỐ 52/2008/NĐ-CP</p>
                 </li>
                             <li>
-                    <a href="luat-so-402013qh13-sua-doi-bo-sung-mot-so-dieu-cua-luat-pccc-so-272001qh10-24.html"><img src="../upload/news/4135916200720166756_170x117.png" alt="Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10" /></a>
-                    <h4><a href="luat-so-402013qh13-sua-doi-bo-sung-mot-so-dieu-cua-luat-pccc-so-272001qh10-24.html">Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10</a></h4>
+                    <a href="luat-so-402013qh13-sua-doi-bo-sung-mot-so-dieu-cua-luat-pccc-so-272001qh10-24"><img src="../upload/news/4135916200720166756_170x117.png" alt="Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10" /></a>
+                    <h4><a href="luat-so-402013qh13-sua-doi-bo-sung-mot-so-dieu-cua-luat-pccc-so-272001qh10-24">Luật SỐ 40/2013/QH13: SỬA ĐỔI BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT PCCC SỐ 27/2001/QH10</a></h4>
                     <p class="mota"> </p>
                 </li>
                             <li>
-                    <a href="nghi-dinh-chinh-phu-so-062013ndcp-ve-bao-ve-co-quan-doanh-nghiep-23.html"><img src="../upload/news/3135435200720160902_170x116.png" alt="NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP" /></a>
-                    <h4><a href="nghi-dinh-chinh-phu-so-062013ndcp-ve-bao-ve-co-quan-doanh-nghiep-23.html">NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP</a></h4>
+                    <a href="nghi-dinh-chinh-phu-so-062013ndcp-ve-bao-ve-co-quan-doanh-nghiep-23"><img src="../upload/news/3135435200720160902_170x116.png" alt="NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP" /></a>
+                    <h4><a href="nghi-dinh-chinh-phu-so-062013ndcp-ve-bao-ve-co-quan-doanh-nghiep-23">NGHỊ ĐỊNH CHÍNH PHỦ SỐ 06/2013/NĐ-CP VỀ BẢO VỆ CƠ QUAN DOANH NGHIỆP</a></h4>
                     <p class="mota"> </p>
                 </li>
                             <li>
-                    <a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-22.html"><img src="../upload/news/1135328200720161710_170x124.png" alt="LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP" /></a>
-                    <h4><a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-22.html">LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP</a></h4>
+                    <a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-22"><img src="../upload/news/1135328200720161710_170x124.png" alt="LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP" /></a>
+                    <h4><a href="luat-kinh-doanh-dich-vu-bao-ve-so-522008ndcp-22">LUẬT KINH DOANH DỊCH VỤ BẢO VỆ SỐ 52/2008/NĐ-CP</a></h4>
                     <p class="mota"> </p>
                 </li>
                             <li>
-                    <a href="cach-su-dung-bo-dam-thong-dung-cach-sac-pin-21.html"><img src="../upload/news/9140728200720161143_170x112.png" alt="CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN" /></a>
-                    <h4><a href="cach-su-dung-bo-dam-thong-dung-cach-sac-pin-21.html">CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN</a></h4>
+                    <a href="cach-su-dung-bo-dam-thong-dung-cach-sac-pin-21"><img src="../upload/news/9140728200720161143_170x112.png" alt="CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN" /></a>
+                    <h4><a href="cach-su-dung-bo-dam-thong-dung-cach-sac-pin-21">CÁCH SỬ DỤNG BỘ ĐÀM THÔNG DỤNG, CÁCH SẠC PIN</a></h4>
                     <p class="mota"> </p>
                 </li>
                             <li>
-                    <a href="luat-pccc-so-272001qh10-20.html"><img src="../upload/news/untitled135050200720160427_170x128.png" alt="LUẬT PCCC SỐ 27/2001/QH10" /></a>
-                    <h4><a href="luat-pccc-so-272001qh10-20.html">LUẬT PCCC SỐ 27/2001/QH10</a></h4>
+                    <a href="luat-pccc-so-272001qh10-20"><img src="../upload/news/untitled135050200720160427_170x128.png" alt="LUẬT PCCC SỐ 27/2001/QH10" /></a>
+                    <h4><a href="luat-pccc-so-272001qh10-20">LUẬT PCCC SỐ 27/2001/QH10</a></h4>
                     <p class="mota"> </p>
                 </li>
                             <li>
-                    <a href="thong-bao-dang-ky-danh-sach-can-bo-nhan-vien-di-du-lich-nam-2016-19.html"><img src="../upload/news/dc_150916_phanthiet175436130620166772_170x113.jpg" alt="THÔNG BÁO ĐĂNG KÝ DANH SÁCH CÁN BỘ NHÂN VIÊN ĐI DU LỊCH NĂM 2016" /></a>
-                    <h4><a href="thong-bao-dang-ky-danh-sach-can-bo-nhan-vien-di-du-lich-nam-2016-19.html">THÔNG BÁO ĐĂNG KÝ DANH SÁCH CÁN BỘ NHÂN VIÊN ĐI DU LỊCH NĂM 2016</a></h4>
+                    <a href="thong-bao-dang-ky-danh-sach-can-bo-nhan-vien-di-du-lich-nam-2016-19"><img src="../upload/news/dc_150916_phanthiet175436130620166772_170x113.jpg" alt="THÔNG BÁO ĐĂNG KÝ DANH SÁCH CÁN BỘ NHÂN VIÊN ĐI DU LỊCH NĂM 2016" /></a>
+                    <h4><a href="thong-bao-dang-ky-danh-sach-can-bo-nhan-vien-di-du-lich-nam-2016-19">THÔNG BÁO ĐĂNG KÝ DANH SÁCH CÁN BỘ NHÂN VIÊN ĐI DU LỊCH NĂM 2016</a></h4>
                     <p class="mota"> </p>
                 </li>
                     </ul>
@@ -1589,60 +1591,60 @@ marqueeInit({
 </script>    
 
 <div class="marquee" id="mycrawler2">
-	    	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/dadl_logo-3768.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/vinamilk_logo-2123.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/pt-4342.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/redbull-0539.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/2-9094.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/1-2603.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/lalamove-3662.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/sgf-2289.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/ln-8809.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/l&amp;t-5846.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/qp-0449.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/cgv-3874.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/unicons-7536.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/toyota-7830.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/cityland-6137.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/11113-0786.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/13-1506.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/12-8312.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/11-5761.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/10-9442.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/9-6760.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/8-6921.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/7-0440.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/6-0093.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/5-4354.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/4-1184.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/3-0514.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/2-9939.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/vtbd-4014.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/cf-6333.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/stp-8498.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/dx-6999.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/rv-6911.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/nct-9969.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/hm-3873.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/tl-8999.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/ts-3112.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/fs-6407.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/vtv-0055.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/vietcapital-0565.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/vd-5227.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/thv-7164.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/tqtd-8144.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/nv-3134.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/ntp-6923.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/ldf-3367.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/lbm-2282.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/hkk-9591.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/bvhh-2950.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/bigc-6285.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/aset-8599.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/amg-9494.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/ag-7619.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
-        	<a href="../index.html" title="" target="_blank"><img src="../upload/hinhanh/aaa-3643.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+	    	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/dadl_logo-3768.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/vinamilk_logo-2123.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/pt-4342.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/redbull-0539.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/2-9094.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/1-2603.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/lalamove-3662.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/sgf-2289.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/ln-8809.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/l&amp;t-5846.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/qp-0449.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/cgv-3874.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/unicons-7536.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/toyota-7830.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/cityland-6137.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/11113-0786.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/13-1506.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/12-8312.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/11-5761.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/10-9442.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/9-6760.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/8-6921.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/7-0440.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/6-0093.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/5-4354.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/4-1184.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/3-0514.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/2-9939.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/vtbd-4014.png" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/cf-6333.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/stp-8498.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/dx-6999.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/rv-6911.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/nct-9969.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/hm-3873.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/tl-8999.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/ts-3112.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/fs-6407.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/vtv-0055.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/vietcapital-0565.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/vd-5227.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/thv-7164.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/tqtd-8144.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/nv-3134.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/ntp-6923.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/ldf-3367.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/lbm-2282.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/hkk-9591.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/bvhh-2950.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/bigc-6285.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/aset-8599.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/amg-9494.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/ag-7619.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
+        	<a href="../index" title="" target="_blank"><img src="../upload/hinhanh/aaa-3643.jpg" alt="CÔNG TY TNHH DỊCH VỤ BẢO VỆ CHUYÊN NGHIỆP LONG HẢI" /></a>
     </div>
         <div class="clear"></div>
     </div>
