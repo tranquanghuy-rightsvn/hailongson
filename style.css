@@ -17,18 +17,20 @@ img{max-width:100% !important;}
 div.bando img{max-width:none !important;}
 body{font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.5;background:url(images/bg_body.png) center top;color:#fff; margin: 0; padding: 0; width:100%;}
 @font-face{font-family:'myFont';src:url('font/cambriab.ttf');}
-div#wapper{margin:auto;max-width:1300px;}
-div#header{position:relative;margin:auto;background:url(images/bg_header.png) center top no-repeat;color:#fff;background-size:100% 100%;text-align:center;min-height:164px;z-index:40;max-width:1366px;}
+div#wapper{margin:auto;max-width:100%;}
+div#header{position:relative;margin:auto;background:url(images/bg_header_new_crop.png) center top no-repeat;color:#fff;background-size:100% 100%;text-align:center;min-height:164px;z-index:40;max-width:100%;}
 div#header a.logo{display:block;line-height:0;}
 div#header img.logo_mobi{display:none;}
 div#header a.logo img{max-height:120px;}
 div#header a.logo2 img{position:absolute;left:10%;top:4px;max-height:150px;}
+div#header a.logo{display:block;line-height:1.3;padding:35px 0 0;color:#fff;font-family:'myFont';font-size:20px;font-weight:bold;text-decoration:none;text-transform:uppercase;}
+div#header a.logo .logo-brand{display:inline-block;margin-top:2px;color:#e30613;font-size:34px;}
 p.hotline{position:absolute;top:37%;right:20px;font-size:18px;font-family:'myFont';background:url(images/phone.png) left center no-repeat;padding:3px 0;padding-left:40px;}
 p.hotline span{color:#FFFF00;font-size:20px;}
 div#menu_mobi{display:none;}
-div#wap_menu{max-width:1300px;margin:auto;z-index:50;position:relative; }
-div#menu{position:relative;background-size:auto 100%;height:37px;line-height:37px;margin-top:-37px;margin-right:70px;}
-div#menu ul{list-style:none; margin: 0; padding: 0; float:right; z-index: 50}
+div#wap_menu{max-width:100%;margin:auto;z-index:50;position:relative; }
+div#menu{position:relative;background-size:auto 100%;height:37px;line-height:37px;margin-top:-37px;}
+div#menu ul{list-style:none; margin: 0; padding: 0; float:right; z-index: 50; flex-shrink:0; white-space:nowrap;}
 div#menu ul li{float:left;position:relative;z-index:50;}
 div#menu ul li.line{background:url(images/menu_gach.png) center no-repeat;height:37px;width:1px;}
 div#menu ul li a{color:#fff;font-size:19px;padding:0px 20px;text-decoration:none;font-family:'myFont';}
@@ -40,11 +42,13 @@ div#menu ul li:hover ul{display:block;}
 div#menu ul li ul li{width:220px;line-height:1.5;background:#121847;border-bottom:1px solid #2f356b;}
 div#menu ul li ul li a{padding:6px 10px;text-transform:none;display:block;font-size:16px;border:none;}
 div#menu ul li ul li ul{left:220px;top:0px;}
-div.menu-flex {display: flex; flex-grow: 1;align-items: right; margin-left: auto;justify-content: space-between;}
+/* Vung menu PC phai nam trong doan lo xuong cua bg_header_new_crop.png (khong phai giua toan bo trang):
+   doan lo xuong chinh chiem tu ~32.7% den ~92.3% chieu rong anh nen, do bang pixel alpha/mau do cua vien zigzag. */
+div.menu-flex {display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding-left: 33%; padding-right: 8%;}
 div#search{position:absolute;right:20px;top:7px;background:#fff;border-radius:2px;height:25px;}
 div#search input{padding:0px 10px;float:left;margin-top:5px;border:none;background:none;width:180px;outline:none;color:#777;font-style:italic;}
 div#search i{float:right;margin-right:5px;margin-top:4px;color:#222;font-size:14px;}
-div#slider{margin:auto;max-width:1349px;margin-top:0px;}
+div#slider{margin:auto;max-width:100%;margin-top:0px;}
 div#left{width:20%;float:left;}
 div.tieude{color:#fff;text-align:center;font-size:14px;background:url(images/tieude.png) center repeat-x;height:39px;line-height:39px;font-weight:bold;text-transform:uppercase;}
 div.danhmuc{border:1px solid #d6d6d6;margin-bottom:12px;}
@@ -92,14 +96,14 @@ div.item .sp_gia{font-size:14px;}
 div.item .sp_gia span.giacu{color:#666666;text-decoration:line-through;float:left;}
 div.item .sp_gia span.giamoi{color:#666666;color:red;float:right;}
 div.item .sp_gia span.motgia{display:block;float:none;}
-div.wap_trangchu{padding:2%;max-width:1300px;margin:15px auto;margin-bottom:20px;background:rgba(0,0,0,0.2);border:7px solid #2b385d;box-sizing:border-box;border-radius:4px;}
+div.wap_trangchu{padding:2%;max-width:100%;margin:15px auto;margin-bottom:20px;background:rgba(0,0,0,0.2);border:7px solid #2b385d;box-sizing:border-box;border-radius:4px;}
 div.wap_thuvien{float:left;width:33%;float:left;}
 div.thuvien p{width:92%;margin:3% auto;position:relative;overflow:hidden;}
 div.thuvien p:before{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.5);content:'';-webkit-transition:-webkit-transform 0.6s;transition:transform 0.6s;-webkit-transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);}
 div.thuvien .item_tv:hover p:before{webkit-transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);}
 div.thuvien p a img{width:100%;border:3px solid #e2e2e2;box-sizing:border-box;}
-div#wap_footer{max-width:1349px;background:url(images/footer.png) no-repeat; background-size:cover; border-top:1px solid #fff;padding-top:20px;margin:auto;border-top:7px solid #384063;}
-div#footer{max-width:1300px;margin:auto;}
+div#wap_footer{max-width:100%;background:url(images/footer.png) no-repeat; background-size:cover; border-top:1px solid #fff;padding-top:20px;margin:auto;border-top:7px solid #384063;}
+div#footer{max-width:100%;margin:auto;}
 div#main_footer{width:65%;float:left;}
 div#thongke{width:30%;float:right;}
 div#thongke .td_ft{color:#ffff00;margin-bottom:7px;font-size:17px;text-transform:uppercase;font-family:'myFont';}
@@ -110,8 +114,8 @@ div.gioithieu{padding:10px;box-sizing:border-box;}
 div.bb-custom-wrapper{width:35%;float:left;}
 div.gioithieu .mota{float:right;width:63%;}
 div.gioithieu a.chitiet{width:65px;padding-left:21px;height:31px;line-height:31px;text-align:center;color:#FFFF00;display:block;margin:auto;text-decoration:none;background:url(images/i_chitiet.png) center no-repeat;}
-div#wap_doitac{border-top:7px solid #384063;padding:16px 0;max-width:1346px;margin:auto;<!--border-bottom:1px solid #fff;-->}
-div#doitac{box-sizing:border-box;max-width:1300px;margin:auto;}
+div#wap_doitac{border-top:7px solid #384063;padding:16px 0;max-width:100%;margin:auto;<!--border-bottom:1px solid #fff;-->}
+div#doitac{box-sizing:border-box;max-width:100%;margin:auto;}
 div#doitac a img{height:90px;margin:0 10px;}
 div.wap_pro{margin:15px auto;clear:both;}
 .zoom_slick{width:35%;float:left;}
@@ -155,7 +159,7 @@ table#tt span{color:red;}
 50%{transform:rotate(180deg) scale(1.5);}
 100%{transform:rotate(360deg) scale(0);}
 }
-.main-slider {margin-top:-34px !important; z-index: -1; position: relative;}
+.main-slider {margin-top:-34px !important; z-index: 1; position: relative;}
 @media screen and (max-width:1024px){div#menu ul li a{padding:0px 10px;font-size:16px;}
 div.frm_lienhe{margin:10px 0px 0px 0px;}
 p.hotline{background:none;padding:0;}
@@ -164,8 +168,10 @@ p.hotline span{font-size:17px;}
 @media screen and (max-width:960px){div#goodledich{position:relative;top:auto;right:auto;}
 div#header a.logo img{max-height:100px;width:80%;float:right;}
 div.item_tv{width:31%;}
-div#header{background:none;min-height:auto;padding:10px;}
+div#header{background:none;min-height:140px;padding:10px;}
 div#header a.logo2 img{left:5px;max-height:120px;}
+div#header a.logo{float:none;width:auto;padding:10px 10px 10px 135px;font-size:16px;text-align:left;}
+div#header a.logo .logo-brand{font-size:22px;}
 p.hotline{position:absolute;top:auto;right:5px;font-size:14px;font-family:'myFont';background:none;padding:3px 0;padding-left:0px;bottom:0px;}
 div#flags a img{width:25px;}
 p.hotline span{color:#FFFF00;font-size:17px;}
@@ -203,6 +209,9 @@ div#tinmoi ul li a img{width:30%;}
 div.item_tv{width:45%;margin:2%;}
 div#header a.logo img{max-height:100px;}
 div#header a.logo2 img{max-height:100px;}
+div#header{min-height:120px;}
+div#header a.logo{font-size:14px;padding-left:115px;}
+div#header a.logo .logo-brand{font-size:19px;}
 div.item .sp_name a{font-size:14px;margin-bottom:5px;}
 div.item{width:100%;padding:2% 0;}
 div.wap_item:before{display:none;}
@@ -236,19 +245,57 @@ div#thongke ul li{display:inline-block;width:49%;}
 p.hotline{width:90%;float:none;max-width:500px !important;margin:auto;}
 p.hotline span{font-size:14px;}
 div#header a.logo2 img{max-height:75px;}
+div#header{min-height:95px;}
+div#header a.logo{font-size:12px;padding-left:90px;margin-top:0;}
+div#header a.logo .logo-brand{font-size:16px;}
 }
 @media screen and (max-width:360px){div#header a.logo2 img{max-height:55px;margin-top:10px;}
+div#header{min-height:75px;}
+div#header a.logo{font-size:11px;padding-left:70px;padding-top:6px;}
+div#header a.logo .logo-brand{font-size:14px;}
 .box_news a img{width:100px;}
 div#thongke ul li{display:inline-block;width:100%;}
 p.hotline{bottom:-6px;}
 }
 
-.main-slide {cursor: move;width: 1349px; height: 450px;overflow: hidden;}
-.main-slide-content {position: relative;max-width: 1349px; height: 450px;}
-.slider-img {max-width:1366px !important; max-height:450px}
+.main-slide {cursor: move;width: 100%; height: 450px;overflow: hidden;}
+.main-slide-content {position: relative;max-width: 100%; height: 450px;}
+#slider .flexslider .slides li{height:450px;overflow:hidden;}
+.slider-img {width:100%;height:450px;max-width:100% !important;object-fit:cover;object-position:center 50%;display:block;}
 
-@media only screen and (min-width: 320px) and (max-width: 767px){ 
+/* Diem nhan cat anh rieng cho tung slide (thu tu khop voi index.html) - anh goc khong bi thay doi, chi crop hien thi */
+#slider .slides li:nth-child(1) .slider-img{object-position:center 45%;}
+#slider .slides li:nth-child(2) .slider-img{object-position:center 55%;}
+#slider .slides li:nth-child(3) .slider-img{object-position:center 60%;}
+#slider .slides li:nth-child(4) .slider-img{object-position:center 45%;}
+#slider .slides li:nth-child(5) .slider-img{object-position:center 45%;}
+#slider .slides li:nth-child(6) .slider-img{object-position:center 55%;}
+#slider .slides li:nth-child(7) .slider-img{object-position:center 55%;}
+#slider .slides li:nth-child(8) .slider-img{object-position:center 40%;}
+#slider .slides li:nth-child(9) .slider-img{object-position:center 50%;}
+#slider .slides li:nth-child(10) .slider-img{object-position:center 55%;}
+#slider .slides li:nth-child(11) .slider-img{object-position:center 40%;}
 
+/* Nut next/prev cho banner - flexslider mac dinh an (.flex-direction-nav{display:none}) va dung font icon
+   rieng khong ton tai trong project nen phai bat lai + doi sang FontAwesome da co san */
+#slider .flex-direction-nav{display:block;}
+#slider .flex-direction-nav a{width:46px;height:46px;margin-top:-23px;background:rgba(0,0,0,0.4);border-radius:50%;opacity:0.7;transition:background .3s,opacity .3s;font-size:0;line-height:0;color:transparent;text-indent:-9999px;white-space:nowrap;overflow:hidden;}
+#slider .flex-direction-nav a:before{font-family:"FontAwesome";font-size:20px;line-height:46px;position:absolute;left:0;top:0;width:46px;height:46px;text-align:center;text-indent:0;color:#fff;content:'\f104';text-shadow:none;}
+#slider .flex-direction-nav a.flex-next:before{content:'\f105';}
+#slider .flex-direction-nav .flex-prev{left:14px;}
+#slider .flex-direction-nav .flex-next{right:14px;}
+#slider .flex-direction-nav a:hover{background:#e30613;opacity:1;}
+#slider .flex-direction-nav a.flex-disabled{opacity:0!important;}
+@media screen and (max-width:960px){
+#slider .flex-direction-nav a{width:32px;height:32px;margin-top:-16px;}
+#slider .flex-direction-nav a:before{font-size:14px;line-height:32px;width:32px;height:32px;}
+#slider .flex-direction-nav .flex-prev{left:6px;}
+#slider .flex-direction-nav .flex-next{right:6px;}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+#slider .flexslider .slides li{height:220px;}
+.slider-img{height:220px;}
 }
 
 p.hotline > span {
@@ -334,4 +381,30 @@ span.footer-emails .email-item:not(:first-child)::before {
   span.footer-emails .email-item::before {
       content: '• ' !important;
   }
+}
+
+a.hotline-btn{position:absolute;top:37%;right:20px;transform:translateY(-50%);display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#ff3b30,#a80000);color:#fff;font-family:'myFont';text-decoration:none;padding:10px 22px;border-radius:30px;box-shadow:0 3px 10px rgba(0,0,0,0.35);white-space:nowrap;transition:transform .2s,box-shadow .2s;}
+a.hotline-btn i{font-size:22px;color:#ffea00;}
+a.hotline-btn .hotline-text{display:flex;flex-direction:column;line-height:1.15;}
+a.hotline-btn .hotline-label{font-size:14px;font-weight:bold;text-transform:uppercase;}
+a.hotline-btn .hotline-number{color:#ffea00;font-size:22px;font-weight:800;}
+a.hotline-btn:hover{transform:translateY(-50%) scale(1.05);box-shadow:0 5px 14px rgba(0,0,0,0.45);color:#fff;}
+@media screen and (max-width:1024px){
+a.hotline-btn{padding:8px 16px;gap:8px;}
+a.hotline-btn i{font-size:18px;}
+a.hotline-btn .hotline-label{font-size:12px;}
+a.hotline-btn .hotline-number{font-size:18px;}
+}
+@media screen and (max-width:960px){
+a.hotline-btn{position:absolute;top:auto;bottom:6px;right:8px;transform:none;padding:6px 12px;gap:6px;}
+a.hotline-btn:hover{transform:none;}
+a.hotline-btn i{font-size:14px;}
+a.hotline-btn .hotline-label{font-size:10px;}
+a.hotline-btn .hotline-number{font-size:14px;}
+}
+@media screen and (max-width:360px){
+a.hotline-btn{padding:5px 9px;}
+a.hotline-btn .hotline-label{font-size:9px;}
+a.hotline-btn .hotline-number{font-size:12px;}
+}
 }
