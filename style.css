@@ -184,6 +184,11 @@ nav#menu_mobi a,a.hien_menu,div.mobile-menu-overlay{-webkit-tap-highlight-color:
 nav#menu_mobi.open{transform:translateX(0);}
 div.mobile-menu-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;margin:0;background:rgba(3,7,20,0.55);opacity:0;visibility:hidden;transition:opacity 0.35s ease;z-index:999;cursor:pointer;}
 div.mobile-menu-overlay.open{opacity:1;visibility:visible;}
+.mobile-menu-head{display:flex;align-items:center;justify-content:space-between;padding:14px 10px 14px 20px;border-bottom:1px solid rgba(255,255,255,0.15);}
+.mobile-menu-title{font-family:'myFont';font-size:17px;letter-spacing:0.5px;color:#ffea00;text-transform:uppercase;}
+.mobile-menu-close{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:rgba(255,255,255,0.08);color:#fff;border-radius:8px;font-size:16px;cursor:pointer;transition:background 0.2s ease,color 0.2s ease;-webkit-tap-highlight-color:transparent;}
+.mobile-menu-close:hover,.mobile-menu-close:focus-visible{background:rgba(255,60,60,0.25);color:#ff6b6b;}
+.mobile-menu-close:active{background:rgba(255,60,60,0.4);}
 nav#menu_mobi ul{list-style:none;margin:0;padding:0;}
 nav#menu_mobi > ul > li{border-bottom:1px solid rgba(255,255,255,0.12);margin:0;}
 nav#menu_mobi > ul > li > a{display:block;padding:14px 44px 14px 20px;margin:0;color:#fff;text-decoration:none;font-size:15px;position:relative;transition:background 0.15s ease,color 0.15s ease;}
@@ -199,7 +204,6 @@ li.has-submenu.open > .mobile-submenu{max-height:600px;}
 .mobile-submenu > li > a{display:block;padding:12px 20px 12px 36px;margin:0;color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;border-top:1px solid rgba(255,255,255,0.08);transition:color 0.15s ease,background 0.15s ease;}
 .mobile-submenu > li > a:hover,.mobile-submenu > li > a:focus-visible{color:#ffea00;background:rgba(255,234,0,0.06);}
 .mobile-submenu > li > a:active{background:rgba(255,234,0,0.14);}
-.mobile-submenu > li > a:hover{color:#ffea00;}
 @media screen and (max-width:1024px){div#menu ul li a{padding:0px 10px;font-size:16px;}
 div.frm_lienhe{margin:10px 0px 0px 0px;}
 p.hotline{background:none;padding:0;}

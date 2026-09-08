@@ -50,14 +50,8 @@
 
 /* Layout
 ***********************/
-/* Dead demo component (see the disabled block further down) - bare nav/li selectors
-   collided with our real <nav id="menu_mobi"> mobile menu, disabled for the same reason.
-nav { margin-bottom: 20px; }
-nav li {margin: 0 0 7px; font-size: 15px; }
-nav li a:hover,
-nav li.active a  {border-bottom: 1px dotted #fff; border-bottom: 1px dotted rgba(255,255,255,0.3); background: none;}
-nav li.active a  { cursor: default; }
-*/
+/* Dead demo component (see note further down) - bare nav/li selectors collided with our
+   real <nav id="menu_mobi"> mobile menu. Deleted outright. */
 
 /* Media Queries
 ***********************/
@@ -84,82 +78,13 @@ nav li.active a  { cursor: default; }
 
   #main {margin-left: 0;}
   h3.nav-header { margin: 0 auto 10px; font-size: 16px; }
-	/* Dead demo component from the original flexslider template (a "current slide info"
-	   dropdown never used on this site) - disabled because its bare nav/ul/li/a selectors
-	   collided with our real <nav id="menu_mobi"> mobile menu at this same breakpoint,
-	   twice (once for its background color, once for display:none hiding every <li>). */
-	/*
-  nav {
-		position: relative;
-		min-height: 46px;
-		margin-bottom: 20px;
-		width: 100%;
-	}
-	nav ul {
-		width: 260px;
-		padding: 0;
-		position: absolute;
-		left: 50%;
-		margin-left: -130px;
-		top: 0;
-		z-index: 9999;
-		border: 1px solid #1e5486;
-		background: #255a8c;
-		-webkit-border-radius: 3px;
-		   -moz-border-radius: 3px;
-		        border-radius: 3px;
-		-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.2), inset 0 0 2px 0 rgba(255,255,255,0.2);
-		   -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,.2), inset 0 0 2px 0 rgba(255,255,255,0.2);
-	        	box-shadow: 0 0 5px 0 rgba(0,0,0,.2), inset 0 0 2px 0 rgba(255,255,255,0.2);
-	}
-	nav li {
-		display: none; /* hide all <li> items */
-		margin: 0;
-	}
-	nav li a  { border: none!important; text-shadow: 1px 1px 0 rgba(0,0,0,0.3); }
-	nav li a:hover  { text-decoration: underline; }
-	nav .active {
-		display: block; /* show only current <li> item */
-	}
-	nav a {
-		display: block;
-		padding: 10px 20px;
-		text-align: center;
-		font-size: 12px;
-	}
-	nav .active a {
-		background: none;
-		color: #fff;
-		position: relative;
-	}
-	nav .active a:after  {
-		font-family: flexslider-icon;
-		content: '\f005';
-		font-size: 13px;
-		position: absolute;
-		right: 10px;
-		top: 10px;
-	}
-
-	/* on nav hover */
-	nav ul:hover {
-		background: #32679a;
-	}
-	nav ul:hover li {
-		display: block;
-		margin: 0 0 5px;
-	}
-	nav ul:hover .active {
-		border: 1px solid #1e5486!important;
-		background: #255a8c;
-		-webkit-border-radius: 1px;
-		-moz-border-radius: 1px;
-		border-radius: 1px;
-	}
-	nav ul:hover .active a:after  {
-		display: none;
-	}
-	*/
+	/* A dead demo component from the original flexslider template ("current slide info"
+	   dropdown, never used on this site) used to live here. Its bare nav/ul/li/a selectors
+	   kept colliding with our real <nav id="menu_mobi"> mobile menu at this same breakpoint
+	   (background color, then display:none on every <li>, then this hover background) -
+	   wrapping it in a CSS comment didn't work because its own inline comments (e.g.
+	   "display:none; /* hide all li items */") closed the wrapper early, so the rest of the
+	   block silently stayed live. Deleted outright instead of trying to comment it out. */
   
 }
 

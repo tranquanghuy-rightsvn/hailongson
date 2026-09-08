@@ -13,6 +13,14 @@
 		overlay.className = 'mobile-menu-overlay';
 		document.body.appendChild(overlay);
 
+		var head = document.createElement('div');
+		head.className = 'mobile-menu-head';
+		head.innerHTML = '<span class="mobile-menu-title">Menu</span>' +
+			'<button type="button" class="mobile-menu-close" aria-label="Đóng menu">' +
+			'<i class="fa fa-times" aria-hidden="true"></i></button>';
+		nav.insertBefore(head, nav.firstChild);
+		var closeBtn = head.querySelector('.mobile-menu-close');
+
 		var icon = trigger.querySelector('i');
 
 		function setOpen(isOpen) {
@@ -31,6 +39,12 @@
 		});
 		overlay.addEventListener('click', function () {
 			setOpen(false);
+		});
+		closeBtn.addEventListener('click', function () {
+			setOpen(false);
+		});
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && nav.classList.contains('open')) setOpen(false);
 		});
 
 		// Any top-level item whose nested <ul> actually has entries becomes an
