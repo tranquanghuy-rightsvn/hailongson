@@ -61,10 +61,17 @@ div#danhmuc ul li ul li a{padding:9px 5px 9px 35px;background:url(images/i_tinkh
 div.wap_video{width:33%;float:right;}
 div#tinmoi{width:30%;float:left;margin-left:2%;}
 div#tinmoi ul{list-style:none;}
-div#tinmoi ul li{padding:4px 0;}
-div#tinmoi ul li a img{width:112px;border:2px solid #e2e2e2;float:left;margin-right:10px;}
+div#tinmoi ul li{padding:8px 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.1);}
+div#tinmoi ul li:last-child{border-bottom:none;}
+/* Was a vertical slick carousel (removed) with images left at height:auto - since the source
+   thumbnails have wildly inconsistent native ratios (91-130px tall for the same ~170px width),
+   letting the slider's computed slide height clip them cut off the bottom of taller ones and
+   the description text below. Fixed-size + object-fit shows every photo whole, no cropping. */
+div#tinmoi ul li a img{width:80px;height:60px;object-fit:cover;border:2px solid #e2e2e2;border-radius:4px;float:left;margin-right:10px;}
+div#tinmoi ul li:nth-child(n+4){display:none;}
 div#tinmoi ul li h4 a{text-decoration:none;color:#ffffff;font-size:13px;transition:0.4s;display:block;margin-bottom:5px;}
 div#tinmoi ul li h4 a:hover{color:#f1e00b;transition:0.4s;}
+div#tinmoi ul li p.mota{font-size:12px;color:#c9cbd6;line-height:1.4;margin:0;}
 div#hotro{}
 div#hotro .phone{background:url(images/phone.png) 13px center no-repeat;color:#d60000;font-size:20px;font-weight:bold;padding-left:60px;padding-top:20px;padding-bottom:10px;}
 div#hotro ul{list-style:none;border-bottom:1px dashed #DDDDDD;padding:10px 0;margin:0px 10px;}
@@ -189,6 +196,11 @@ div#menu_mobi div.header a.hien_menu i{float:none;margin:0;font-size:20px;}
    item. Force the same padding-top mmenu's own theme uses on the root panel (2.5em) everywhere. */
 nav#menu_mobi.mm-menu .mm-panel{padding-top:42px !important;}
 nav#menu_mobi.mm-menu .mm-panel > .mm-listview{margin-top:0 !important;}
+/* Menu overlays on top of the page (offCanvas zposition:'front' in the init script below) instead
+   of pushing it aside. Dim the page behind it and give the panel some depth so it reads as a
+   floating drawer sitting above the content, not a flat push-over panel. */
+nav#menu_mobi.mm-menu{box-shadow:4px 0 24px rgba(0,0,0,0.5);}
+html.mm-opened #mm-blocker{background:rgba(3,7,20,0.55) !important;transition:background 0.4s ease;}
 div#menu{display:none;}
 div#slider{width:100%;padding:0;border:none;margin:0;}
 div#danhmuc{display:none;}
@@ -211,7 +223,7 @@ a.sp_cart i{font-size:30px;}
 div.user{position:absolute;right:10px;top:0px;font-size:30px;color:#fff;cursor:pointer;}
 .menu_login{display:none;}
 div#tinmoi ul li{padding:10px 0;}
-div#tinmoi ul li a img{width:30%;}
+div#tinmoi ul li a img{width:26%;height:60px;}
 .othernews ul.phantrang{margin-left:0;}
 }
 @media screen and (max-width:800px){}

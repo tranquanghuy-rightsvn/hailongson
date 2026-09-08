@@ -2,14 +2,19 @@
 .svg-icon path {
   fill: #4267B2;
 }
-#hot-line {position:fixed; bottom:16px; right:198px;border-radius:4px;
+/* These 3 buttons were each fixed-positioned independently with mismatched bottom offsets
+   (16/50/40px) and not enough right-spacing to clear the phone icon's pulsing ring animation
+   (which renders 100px wide inside a 60px box) - the ring bled into the number pill and the
+   trio never lined up on a shared baseline. bottom values below are chosen so each element's
+   own visual center (icon/pill/logo, not just its box) sits 50px above the viewport edge. */
+#hot-line {position:fixed; bottom:0px; right:245px;border-radius:4px;
 height:100px; width:60px; z-index:999;}
-.my-phone {position:fixed; z-index:99;bottom:50px;right:56px; color:#ff0000; background-color:rgba(255,255,255,0.7);
+.my-phone {position:fixed; z-index:99;bottom:38px;right:68px; color:#ff0000; background-color:rgba(255,255,255,0.7);
 height:24px; width:124px; text-align:right; font-size:18px; font-weight:bold; padding:2px 12px 2px 4px; border-bottom-right-radius:12px;border-top-right-radius:12px;
 }
 .my-phone > a {color:#ff0000 !important; text-decoration:none}
 .my-phone > a:hover {color:#00d300 !important; text-decoration:none}
-.zalo {position:fixed; z-index:99;bottom:40px;right:2px;}
+.zalo {position:fixed; z-index:99;bottom:22px;right:8px;}
 .top-banner {width:100%; position:relative; z-index:999}
 .rev-slider {max-with:360px !important; text-align:center; clear:both}
 .slide-note {margin-top:40px}

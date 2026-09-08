@@ -96,23 +96,7 @@ Không biết tự bao giờ, người bảo vệ dã đến với chúng ta, ma
 			draggable:true,  //Kích hoạt tính năng kéo chuột
 			mobileFirst:true
       });
-	  
-      $('#tinmoi ul').slick({
-		  	lazyLoad: 'ondemand',
-        	infinite: true,//Hiển thì 2 mũi tên
-			accessibility:true,
-			vertical:true,//Chay dọc
-			//fade: true,//Hiệu ứng fade của slider
-		  	slidesToShow: 3,    //Số item hiển thị
-		  	slidesToScroll: 1, //Số item cuộn khi chạy
-		  	autoplay:true,  //Tự động chạy
-			autoplaySpeed:3000,  //Tốc độ chạy
-			arrows:true, //Hiển thị mũi tên
-			centerMode:false,  //item nằm giữa
-			dots:false,  //Hiển thị dấu chấm
-			draggable:true,  //Kích hoạt tính năng kéo chuột
-			mobileFirst:true
-      });
+
     });
 </script>
 
@@ -286,6 +270,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	$(function() {
 		var hlsMmenuApi = $('nav#menu_mobi').mmenu({
 			extensions	: [ 'effect-slide-menu', 'pageshadow' ],
+			offCanvas	: { zposition: 'front' },
 			searchfield	: true,
 			counters	: true,
 			navbar 		: {
