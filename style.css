@@ -170,23 +170,35 @@ table#tt span{color:red;}
    Hidden by default (desktop); the max-width:960px block below flips these to visible -
    that's the only thing display-switched there, everything else here always applies. */
 div.header{display:none;}
-a.hien_menu{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:4px 0 4px 10px;padding:0;border-radius:8px;background:rgba(255,255,255,0.08);color:#ffea00;text-align:center;text-decoration:none;}
-a.hien_menu i{float:none;margin:0;font-size:20px;}
+a.hien_menu{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:4px 0 4px 10px;padding:0;border-radius:8px;background:rgba(255,255,255,0.08);color:#ffea00;text-align:center;text-decoration:none;transition:background 0.2s ease;cursor:pointer;}
+a.hien_menu:hover,a.hien_menu:focus-visible{background:rgba(255,234,0,0.18);}
+a.hien_menu:active{background:rgba(255,234,0,0.3);}
+a.hien_menu i{float:none;margin:0;font-size:20px;pointer-events:none;}
 body.mobile-menu-locked{overflow:hidden;}
-nav#menu_mobi{display:none;position:fixed;top:0;left:0;bottom:0;width:82%;max-width:400px;background:#0c1638;color:#fff;z-index:1000;overflow-y:auto;-webkit-overflow-scrolling:touch;transform:translateX(-100%);transition:transform 0.35s ease;box-shadow:4px 0 24px rgba(0,0,0,0.5);}
+/* Explicit margin/text-align reset: third-party widget CSS (bookblock.css, flexdemo.css) ships
+   bare `nav{...}` rules meant only for their own <nav> elements, which also match this real
+   <nav id="menu_mobi"> since bare tag selectors apply everywhere. An ID selector always outranks
+   those, so pinning every box-model property here guarantees this panel is never nudged by them. */
+nav#menu_mobi{display:none;position:fixed;top:0;left:0;right:auto;bottom:0;margin:0;width:82%;max-width:400px;max-height:none;text-align:left;background:#0c1638;color:#fff;z-index:1000;overflow-y:auto;-webkit-overflow-scrolling:touch;transform:translateX(-100%);transition:transform 0.35s ease;box-shadow:4px 0 24px rgba(0,0,0,0.5);box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+nav#menu_mobi a,a.hien_menu,div.mobile-menu-overlay{-webkit-tap-highlight-color:transparent;}
 nav#menu_mobi.open{transform:translateX(0);}
-div.mobile-menu-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(3,7,20,0.55);opacity:0;visibility:hidden;transition:opacity 0.35s ease;z-index:999;}
+div.mobile-menu-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;margin:0;background:rgba(3,7,20,0.55);opacity:0;visibility:hidden;transition:opacity 0.35s ease;z-index:999;cursor:pointer;}
 div.mobile-menu-overlay.open{opacity:1;visibility:visible;}
 nav#menu_mobi ul{list-style:none;margin:0;padding:0;}
-nav#menu_mobi > ul > li{border-bottom:1px solid rgba(255,255,255,0.12);}
-nav#menu_mobi > ul > li > a{display:block;padding:14px 44px 14px 20px;color:#fff;text-decoration:none;font-size:15px;position:relative;}
+nav#menu_mobi > ul > li{border-bottom:1px solid rgba(255,255,255,0.12);margin:0;}
+nav#menu_mobi > ul > li > a{display:block;padding:14px 44px 14px 20px;margin:0;color:#fff;text-decoration:none;font-size:15px;position:relative;transition:background 0.15s ease,color 0.15s ease;}
 nav#menu_mobi > ul > li > a.active{color:#ffea00;}
-nav#menu_mobi > ul > li > a:hover{background:rgba(255,234,0,0.08);}
-.mobile-submenu-arrow{position:absolute;right:14px;top:50%;transform:translateY(-50%);transition:transform 0.3s ease;font-size:13px;color:rgba(255,255,255,0.6);padding:10px;margin:-10px;}
+nav#menu_mobi > ul > li > a:hover,nav#menu_mobi > ul > li > a:focus-visible{background:rgba(255,234,0,0.08);}
+nav#menu_mobi > ul > li > a:active{background:rgba(255,234,0,0.16);}
+.mobile-submenu-arrow{position:absolute;right:14px;top:50%;transform:translateY(-50%);transition:transform 0.3s ease,color 0.15s ease;font-size:13px;color:rgba(255,255,255,0.6);padding:10px;margin:-10px;cursor:pointer;}
+.mobile-submenu-arrow:hover{color:#ffea00;}
 li.has-submenu.open > a .mobile-submenu-arrow{transform:translateY(-50%) rotate(180deg);}
-.mobile-submenu{max-height:0;overflow:hidden;transition:max-height 0.35s ease;background:rgba(0,0,0,0.2);}
+.mobile-submenu{max-height:0;overflow:hidden;transition:max-height 0.35s ease;background:rgba(0,0,0,0.2);margin:0;padding:0;}
 li.has-submenu.open > .mobile-submenu{max-height:600px;}
-.mobile-submenu > li > a{display:block;padding:12px 20px 12px 36px;color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;border-top:1px solid rgba(255,255,255,0.08);}
+.mobile-submenu > li{margin:0;}
+.mobile-submenu > li > a{display:block;padding:12px 20px 12px 36px;margin:0;color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;border-top:1px solid rgba(255,255,255,0.08);transition:color 0.15s ease,background 0.15s ease;}
+.mobile-submenu > li > a:hover,.mobile-submenu > li > a:focus-visible{color:#ffea00;background:rgba(255,234,0,0.06);}
+.mobile-submenu > li > a:active{background:rgba(255,234,0,0.14);}
 .mobile-submenu > li > a:hover{color:#ffea00;}
 @media screen and (max-width:1024px){div#menu ul li a{padding:0px 10px;font-size:16px;}
 div.frm_lienhe{margin:10px 0px 0px 0px;}
