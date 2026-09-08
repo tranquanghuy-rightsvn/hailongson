@@ -310,6 +310,12 @@ p.hotline{bottom:-6px;}
 .main-slide-content {position: relative;max-width: 100%; height: 450px;}
 #slider .flexslider .slides li{height:450px;overflow:hidden;}
 #slider .slider-img {width:100%;height:450px;max-width:100% !important;object-fit:cover;object-position:center center;display:block;}
+/* css/flexslider.css hides every slide (display:none) until the flexslider() JS plugin runs, so the
+   banner stays blank for however long jQuery + jquery.flexslider.js take to download/parse/execute.
+   Painting the first slide via plain CSS removes that JS dependency for the very first frame; the
+   plugin still takes over normally once it loads (it force-sets its own inline display/width on all
+   slides during init, so nothing here fights it). */
+#slider .flexslider .slides > li:first-child{display:block;}
 /* #slider prefix needed: css/flexslider.css's ".flexslider .slides img{height:auto}" (2 classes+tag)
    is more specific than a bare ".slider-img" (1 class) and was silently winning, leaving a gap under
    wide-aspect slides where object-fit:cover never got a height to work with. */
