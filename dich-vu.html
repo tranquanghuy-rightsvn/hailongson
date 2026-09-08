@@ -238,70 +238,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 
-<div id="menu_mobi"> 
-    <!--Tim kiem-->
-<script language="javascript"> 
-    function doEnter2(evt){
-	var key;
-	if(evt.keyCode == 13 || evt.which == 13){
-		onSearch2(evt);
-	}
-	}
-	function onSearch2(evt) {			
-	
-			var keyword2 = document.getElementById("keyword2").value;
-			if(keyword2=='' || keyword2=='Nhập từ khóa tìm kiếm...')
-			{
-				alert('Bạn chưa nhập từ khóa tìm kiếm');
-			}
-			else{
-				location.href = "tim-kiem.html&keyword="+keyword2;
-				loadPage(document.location);			
-			}
-		}		
-</script>   
-<!--Tim kiem-->
-
-<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
-<script type="text/javascript">
-	$(function() {
-		var hlsMmenuApi = $('nav#menu_mobi').mmenu({
-			extensions	: [ 'effect-slide-menu', 'pageshadow' ],
-			offCanvas	: { zposition: 'front' },
-			searchfield	: true,
-			counters	: true,
-			navbar 		: {
-				title		: 'Menu'
-			},
-			navbars		: [
-				{
-					position	: 'top',
-					content		: [ 'searchfield' ]
-				}, {
-					position	: 'top',
-					content		: [
-						'prev',
-						'title',
-						'close'
-					]
-				}, {
-					position	: 'bottom',
-					content		: [
-						'',
-						''
-					]
-				}
-			]
-		}).data('mmenu');
-		$('.hien_menu').click(function(e){
-			e.preventDefault();
-			hlsMmenuApi.open();
-		});
-	});
-</script>
-
 <div class="header"><a href="#menu_mobi" class="hien_menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+</div>
+<script type="text/javascript" src="js/mobile-menu.js"></script>
 </div> 
 <nav id="menu_mobi">
     <ul>	
@@ -338,7 +277,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <li><a style="border:none;" class="" href="lien-he">Liên hệ</a></li>
     </ul>
-</nav></div>
+</nav>
 
 <div id="slider"  class="main-slider">
     <section class="slider">

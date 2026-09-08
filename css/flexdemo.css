@@ -50,11 +50,14 @@
 
 /* Layout
 ***********************/
+/* Dead demo component (see the disabled block further down) - bare nav/li selectors
+   collided with our real <nav id="menu_mobi"> mobile menu, disabled for the same reason.
 nav { margin-bottom: 20px; }
 nav li {margin: 0 0 7px; font-size: 15px; }
 nav li a:hover,
 nav li.active a  {border-bottom: 1px dotted #fff; border-bottom: 1px dotted rgba(255,255,255,0.3); background: none;}
 nav li.active a  { cursor: default; }
+*/
 
 /* Media Queries
 ***********************/
@@ -81,12 +84,17 @@ nav li.active a  { cursor: default; }
 
   #main {margin-left: 0;}
   h3.nav-header { margin: 0 auto 10px; font-size: 16px; }
+	/* Dead demo component from the original flexslider template (a "current slide info"
+	   dropdown never used on this site) - disabled because its bare nav/ul/li/a selectors
+	   collided with our real <nav id="menu_mobi"> mobile menu at this same breakpoint,
+	   twice (once for its background color, once for display:none hiding every <li>). */
+	/*
   nav {
 		position: relative;
 		min-height: 46px;
 		margin-bottom: 20px;
 		width: 100%;
-	}	
+	}
 	nav ul {
 		width: 260px;
 		padding: 0;
@@ -151,6 +159,7 @@ nav li.active a  { cursor: default; }
 	nav ul:hover .active a:after  {
 		display: none;
 	}
+	*/
   
 }
 
