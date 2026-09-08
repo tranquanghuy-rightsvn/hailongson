@@ -1379,9 +1379,9 @@ Website: baovelonghai.vn</span></span></span></p>
   <script defer src="../js/jquery.flexslider.js"></script>
   <script type="text/javascript">
     $(function(){
-      SyntaxHighlighter.all();
+      if (typeof SyntaxHighlighter !== 'undefined') { SyntaxHighlighter.all(); }
     });
-    $(window).load(function(){
+    $(function(){
       $('.flexslider').flexslider({
         animation: "slide",
         start: function(slider){
