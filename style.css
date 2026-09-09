@@ -1,6 +1,7 @@
 ::-webkit-scrollbar{background:#fff;width:10px;height:11px;}
 ::-webkit-scrollbar-thumb{background:#BBBBBB;}
 *{margin:0;padding:0;}
+svg.icon{width:1em;height:1em;fill:currentColor;display:inline-block;vertical-align:-0.125em;}
 .fb_iframe_widget,
 .fb_iframe_widget span,
 .fb_iframe_widget span iframe[style]{min-width:100% !important;}
@@ -31,9 +32,9 @@ div#wap_menu{max-width:100%;margin:auto;z-index:50;position:relative; }
 div#menu{position:relative;background-size:auto 100%;height:37px;line-height:37px;margin-top:-37px;}
 div#menu ul{list-style:none; margin: 0; padding: 0; float:right; z-index: 50; flex-shrink:0; white-space:nowrap;}
 div#menu ul li{float:left;position:relative;z-index:50;}
-div#menu ul li.line{background:url(images/menu_gach.png) center no-repeat;height:37px;width:1px;}
+div#menu ul li.line{background:url(images/menu_gach.webp) center no-repeat;height:37px;width:1px;}
 div#menu ul li a{color:#fff;font-size:19px;padding:0px 20px;text-decoration:none;font-family:'myFont';}
-div#menu ul li a i{font-size:30px;color:#fff;}
+div#menu ul li a svg.icon{font-size:30px;color:#fff;}
 div#menu ul li a:hover,div#menu ul li a.active,div#menu ul li a.active2{color:#ffea00;}
 div#menu ul li ul{top:35px;}
 div#menu ul li ul,div#menu ul li:hover ul li ul{position:absolute;margin-left:0px;display:none;}
@@ -173,7 +174,7 @@ div.header{display:none;}
 a.hien_menu{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:4px 0 4px 10px;padding:0;border-radius:8px;background:rgba(255,255,255,0.08);color:#ffea00;text-align:center;text-decoration:none;transition:background 0.2s ease;cursor:pointer;}
 a.hien_menu:hover,a.hien_menu:focus-visible{background:rgba(255,234,0,0.18);}
 a.hien_menu:active{background:rgba(255,234,0,0.3);}
-a.hien_menu i{float:none;margin:0;font-size:20px;pointer-events:none;}
+a.hien_menu svg.icon{float:none;margin:0;font-size:20px;pointer-events:none;}
 body.mobile-menu-locked{overflow:hidden;}
 /* Explicit margin/text-align reset: third-party widget CSS (bookblock.css, flexdemo.css) ships
    bare `nav{...}` rules meant only for their own <nav> elements, which also match this real
@@ -430,21 +431,21 @@ span.footer-emails .email-item:not(:first-child)::before {
 }
 
 a.hotline-btn{position:absolute;top:37%;right:20px;transform:translateY(-50%);display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#ff3b30,#a80000);color:#fff;font-family:'myFont';text-decoration:none;padding:10px 22px;border-radius:30px;box-shadow:0 3px 10px rgba(0,0,0,0.35);white-space:nowrap;transition:transform .2s,box-shadow .2s;}
-a.hotline-btn i{font-size:22px;color:#ffea00;}
+a.hotline-btn svg.icon{font-size:22px;color:#ffea00;}
 a.hotline-btn .hotline-text{display:flex;flex-direction:column;line-height:1.15;}
 a.hotline-btn .hotline-label{font-size:14px;font-weight:bold;text-transform:uppercase;}
 a.hotline-btn .hotline-number{color:#ffea00;font-size:22px;font-weight:800;}
 a.hotline-btn:hover{transform:translateY(-50%) scale(1.05);box-shadow:0 5px 14px rgba(0,0,0,0.45);color:#fff;}
 @media screen and (max-width:1024px){
 a.hotline-btn{padding:8px 16px;gap:8px;}
-a.hotline-btn i{font-size:18px;}
+a.hotline-btn svg.icon{font-size:18px;}
 a.hotline-btn .hotline-label{font-size:12px;}
 a.hotline-btn .hotline-number{font-size:18px;}
 }
 @media screen and (max-width:960px){
 a.hotline-btn{position:absolute;top:auto;bottom:6px;right:8px;transform:none;padding:6px 12px;gap:6px;}
 a.hotline-btn:hover{transform:none;}
-a.hotline-btn i{font-size:14px;}
+a.hotline-btn svg.icon{font-size:14px;}
 a.hotline-btn .hotline-label{font-size:10px;}
 a.hotline-btn .hotline-number{font-size:14px;}
 }

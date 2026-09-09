@@ -13,23 +13,25 @@
 		overlay.className = 'mobile-menu-overlay';
 		document.body.appendChild(overlay);
 
+		var ICON_BARS = '<rect x="3" y="5" width="18" height="2" rx="1"/><rect x="3" y="11" width="18" height="2" rx="1"/><rect x="3" y="17" width="18" height="2" rx="1"/>';
+		var ICON_TIMES = '<path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>';
+
 		var head = document.createElement('div');
 		head.className = 'mobile-menu-head';
 		head.innerHTML = '<span class="mobile-menu-title">Menu</span>' +
 			'<button type="button" class="mobile-menu-close" aria-label="Đóng menu">' +
-			'<i class="fa fa-times" aria-hidden="true"></i></button>';
+			'<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">' + ICON_TIMES + '</svg></button>';
 		nav.insertBefore(head, nav.firstChild);
 		var closeBtn = head.querySelector('.mobile-menu-close');
 
-		var icon = trigger.querySelector('i');
+		var icon = trigger.querySelector('svg.icon');
 
 		function setOpen(isOpen) {
 			nav.classList.toggle('open', isOpen);
 			overlay.classList.toggle('open', isOpen);
 			document.body.classList.toggle('mobile-menu-locked', isOpen);
 			if (icon) {
-				icon.classList.toggle('fa-bars', !isOpen);
-				icon.classList.toggle('fa-times', isOpen);
+				icon.innerHTML = isOpen ? ICON_TIMES : ICON_BARS;
 			}
 		}
 
@@ -58,9 +60,11 @@
 			sub.classList.add('mobile-submenu');
 
 			var link = li.querySelector('a');
-			var arrow = document.createElement('i');
-			arrow.className = 'fa fa-chevron-down mobile-submenu-arrow';
+			var arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+			arrow.setAttribute('class', 'icon mobile-submenu-arrow');
+			arrow.setAttribute('viewBox', '0 0 24 24');
 			arrow.setAttribute('aria-hidden', 'true');
+			arrow.innerHTML = '<path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>';
 			link.appendChild(arrow);
 
 			arrow.addEventListener('click', function (e) {
