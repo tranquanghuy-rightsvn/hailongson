@@ -19,7 +19,7 @@ div.bando img{max-width:none !important;}
 body{font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.5;background:linear-gradient(180deg,#050810 0%,#0c1638 35%,#0a1230 70%,#05070f 100%);background-repeat:no-repeat;color:#fff; margin: 0; padding: 0; width:100%;}
 @font-face{font-family:'myFont';src:url('font/cambriab.ttf');}
 div#wapper{margin:auto;max-width:100%;}
-div#header{position:relative;margin:auto;background:url(images/bg_header_new_crop.png) center top no-repeat;color:#fff;background-size:100% 100%;text-align:center;min-height:164px;z-index:40;max-width:100%;}
+div#header{position:relative;margin:auto;background:url(images/bg_header_new_crop.webp) center top no-repeat;color:#fff;background-size:100% 100%;text-align:center;min-height:164px;z-index:40;max-width:100%;}
 div#header a.logo{display:block;line-height:0;}
 div#header img.logo_mobi{display:none;}
 div#header a.logo img{max-height:120px;}
@@ -205,7 +205,26 @@ li.has-submenu.open > .mobile-submenu{max-height:600px;}
 .mobile-submenu > li > a{display:block;padding:12px 20px 12px 36px;margin:0;color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;border-top:1px solid rgba(255,255,255,0.08);transition:color 0.15s ease,background 0.15s ease;}
 .mobile-submenu > li > a:hover,.mobile-submenu > li > a:focus-visible{color:#ffea00;background:rgba(255,234,0,0.06);}
 .mobile-submenu > li > a:active{background:rgba(255,234,0,0.14);}
-@media screen and (max-width:1024px){div#menu ul li a{padding:0px 10px;font-size:16px;}
+/* The desktop nav only fits inside the zigzag "notch" painted into
+   bg_header_new_crop.webp (the notch spans ~32.7%-92.3% of the image's own
+   width - see the .menu-flex comment below) down to about 1280px viewport
+   width; below that the fixed .menu-flex padding no longer leaves enough
+   room for the menu items and they spill out over the red zigzag border -
+   worse on tablets in landscape (1024-1194px) than on any phone width, since
+   phones already get the hamburger nav further down. Switch to the mobile
+   header/hamburger nav here instead of trying to keep shrinking the
+   horizontal menu to fit an increasingly narrow notch. */
+@media screen and (max-width:1280px){
+div#header{background:none;min-height:140px;padding:10px;}
+div#header a.logo2 img{left:5px;max-height:120px;}
+div#header a.logo{float:none;width:auto;padding:10px 10px 10px 135px;font-size:16px;text-align:left;}
+div#header a.logo .logo-brand{font-size:22px;}
+div.header{display:block;background:#0c1638;height:52px;line-height:52px;margin:0;box-shadow:0 1px 0 rgba(255,255,255,0.08);position:relative;z-index:70;}
+nav#menu_mobi{display:block;}
+div.mobile-menu-overlay{display:block;}
+div#menu{display:none;}
+}
+@media screen and (max-width:1024px){
 div.frm_lienhe{margin:10px 0px 0px 0px;}
 p.hotline{background:none;padding:0;}
 p.hotline span{font-size:17px;}
@@ -213,21 +232,11 @@ p.hotline span{font-size:17px;}
 @media screen and (max-width:960px){div#goodledich{position:relative;top:auto;right:auto;}
 div#header a.logo img{max-height:100px;width:80%;float:right;}
 div.item_tv{width:31%;}
-div#header{background:none;min-height:140px;padding:10px;}
-div#header a.logo2 img{left:5px;max-height:120px;}
-div#header a.logo{float:none;width:auto;padding:10px 10px 10px 135px;font-size:16px;text-align:left;}
-div#header a.logo .logo-brand{font-size:22px;}
 p.hotline{position:absolute;top:auto;right:5px;font-size:14px;font-family:'myFont';background:none;padding:3px 0;padding-left:0px;bottom:0px;}
 div#flags a img{width:25px;}
 p.hotline span{color:#FFFF00;font-size:17px;}
 div#wapper{width:100%;margin:auto;}
 div#footer{width:97%;}
-/* mobile nav display switches live here since we're already inside max-width:960px;
-   the rest of the mobile-nav styling (js/mobile-menu.js) is unconditional, below. */
-div.header{display:block;background:#0c1638;height:52px;line-height:52px;margin:0;box-shadow:0 1px 0 rgba(255,255,255,0.08);position:relative;z-index:70;}
-nav#menu_mobi{display:block;}
-div.mobile-menu-overlay{display:block;}
-div#menu{display:none;}
 div#slider{width:100%;padding:0;border:none;margin:0;}
 div#danhmuc{display:none;}
 div#right{width:100%}
@@ -436,13 +445,7 @@ a.hotline-btn .hotline-text{display:flex;flex-direction:column;line-height:1.15;
 a.hotline-btn .hotline-label{font-size:14px;font-weight:bold;text-transform:uppercase;}
 a.hotline-btn .hotline-number{color:#ffea00;font-size:22px;font-weight:800;}
 a.hotline-btn:hover{transform:translateY(-50%) scale(1.05);box-shadow:0 5px 14px rgba(0,0,0,0.45);color:#fff;}
-@media screen and (max-width:1024px){
-a.hotline-btn{padding:8px 16px;gap:8px;}
-a.hotline-btn svg.icon{font-size:18px;}
-a.hotline-btn .hotline-label{font-size:12px;}
-a.hotline-btn .hotline-number{font-size:18px;}
-}
-@media screen and (max-width:960px){
+@media screen and (max-width:1280px){
 a.hotline-btn{position:absolute;top:auto;bottom:6px;right:8px;transform:none;padding:6px 12px;gap:6px;}
 a.hotline-btn:hover{transform:none;}
 a.hotline-btn svg.icon{font-size:14px;}
