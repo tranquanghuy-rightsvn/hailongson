@@ -333,11 +333,22 @@ p.hotline{bottom:-6px;}
    khong can chinh object-position rieng cho tung slide nua. */
 
 /* Nut next/prev cho banner - flexslider mac dinh an (.flex-direction-nav{display:none}) va dung font icon
-   rieng khong ton tai trong project nen phai bat lai + doi sang FontAwesome da co san */
+   rieng khong ton tai trong project nen phai bat lai; icon mui ten ve tay bang SVG nhung thang vao
+   content:url() (Font Awesome da bi go bo khoi site nen khong the doi sang no nua nhu truoc). */
 #slider .flex-direction-nav{display:block;}
-#slider .flex-direction-nav a{width:46px;height:46px;margin-top:-23px;background:rgba(0,0,0,0.4);border-radius:50%;opacity:0.7;transition:background .3s,opacity .3s;font-size:0;line-height:0;color:transparent;text-indent:-9999px;white-space:nowrap;overflow:hidden;}
-#slider .flex-direction-nav a:before{font-family:"FontAwesome";font-size:20px;line-height:46px;position:absolute;left:0;top:0;width:46px;height:46px;text-align:center;text-indent:0;color:#fff;content:'\f104';text-shadow:none;}
-#slider .flex-direction-nav a.flex-next:before{content:'\f105';}
+#slider .flex-direction-nav a{width:46px;height:46px;margin-top:-23px;background:rgba(0,0,0,0.4);border-radius:50%;opacity:0.7;transition:background .3s,opacity .3s;font-size:0;line-height:0;color:transparent;white-space:nowrap;overflow:hidden;}
+/* Text hidden via font-size:0 + color:transparent only - NOT text-indent:-9999px (see below) and
+   NOT an extra position:relative here (flexslider.css already makes this element position:absolute,
+   which is itself a valid containing block for the ::before below - adding position:relative on
+   top of that here overrode it with a *different* positioned-element type, breaking the
+   left/right:14px placement of the whole button, not just the icon inside it).
+   Confirmed by testing in isolation: combining text-indent:-9999px with a content:url() ::before
+   (even with position:absolute + transform centering) makes the icon fail to paint at all in
+   Chrome - some quirk in how text-indent interacts with replaced pseudo-element content.
+   font-size:0 already collapses the literal "Previous"/"Next" text flexslider inserts to zero
+   size, so text-indent was redundant anyway. */
+#slider .flex-direction-nav a:before{content:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='white'%3E%3Cpath%20d='M15.41%207.41L14%206l-6%206%206%206%201.41-1.41L10.83%2012z'/%3E%3C/svg%3E");display:block;width:20px;height:20px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+#slider .flex-direction-nav a.flex-next:before{content:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='white'%3E%3Cpath%20d='M10%206L8.59%207.41%2013.17%2012l-4.58%204.59L10%2018l6-6z'/%3E%3C/svg%3E");}
 #slider .flex-direction-nav .flex-prev{left:14px;}
 #slider .flex-direction-nav .flex-next{right:14px;}
 #slider .flex-direction-nav a:hover{background:#e30613;opacity:1;}
