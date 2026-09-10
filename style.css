@@ -2,6 +2,11 @@
 ::-webkit-scrollbar-thumb{background:#BBBBBB;}
 *{margin:0;padding:0;}
 svg.icon{width:1em;height:1em;fill:currentColor;display:inline-block;vertical-align:-0.125em;}
+/* Slick dots default to a black bullet (slick-theme.css), invisible on this site's dark
+   background - override so the photo-gallery carousel's page indicator is actually visible. */
+.thuvien .slick-dots{position:static;margin-top:10px;}
+.thuvien .slick-dots li button:before{color:#ffea00;opacity:.35;}
+.thuvien .slick-dots li.slick-active button:before{opacity:1;}
 .fb_iframe_widget,
 .fb_iframe_widget span,
 .fb_iframe_widget span iframe[style]{min-width:100% !important;}
@@ -88,7 +93,7 @@ div.tieude_giua{color:#f1e00b;font-size:22px;background:url(images/tieude_giua.p
 div.wap_item:before{content:'';width:1px;position:absolute;left:50%;height:89%;background:#d2d2d2;}
 div.item_tv{width:23%;display:inline-block;vertical-align:top;margin:0.85%;}
 div.item a.chitiet{width:65px;padding-left:21px;height:31px;line-height:31px;text-align:center;color:#FFFF00;display:block;float:right;text-decoration:none;background:url(images/i_chitiet.png) center no-repeat;margin-top:10px;}
-div.item_tv a img{width:100%;}
+div.item_tv a img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
 div.item_tv h3 a{text-decoration:none;display:block;color:#fff;font-family:'myFont';font-size:17px;margin-top:5px;text-align:center;}
 div.item_tv h3 a:hover{color:#FFFF00;}
 div.wap_item{overflow:hidden;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-flow:row wrap;-webkit-flex-flow:row wrap;position:relative;}
@@ -108,7 +113,7 @@ div.wap_thuvien{float:left;width:33%;float:left;}
 div.thuvien p{width:92%;margin:3% auto;position:relative;overflow:hidden;}
 div.thuvien p:before{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.5);content:'';-webkit-transition:-webkit-transform 0.6s;transition:transform 0.6s;-webkit-transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);}
 div.thuvien .item_tv:hover p:before{webkit-transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);}
-div.thuvien p a img{width:100%;border:3px solid #e2e2e2;box-sizing:border-box;}
+div.thuvien p a img{width:100%;aspect-ratio:3/2;object-fit:cover;border:3px solid #e2e2e2;box-sizing:border-box;}
 div#wap_footer{max-width:100%;background:url(images/footer.png) no-repeat; background-size:cover; border-top:1px solid #fff;padding-top:20px;margin:auto;border-top:7px solid #384063;}
 div#footer{max-width:100%;margin:auto;}
 div#main_footer{width:65%;float:left;}
