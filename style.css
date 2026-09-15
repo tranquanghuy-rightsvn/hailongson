@@ -63,24 +63,16 @@ div#danhmuc ul li:last-child{border:none;}
 div#danhmuc ul li a{color:#454545;font-family:'myFont';text-decoration:none;font-size:14px;transition:0.4s;display:block;border-bottom:1px solid #DDD;padding:9px 5px 9px 20px;background:url(images/muiten.png) 4px 13px no-repeat;}
 div#danhmuc ul li a:hover{color:red;transition:0.4s;}
 div#danhmuc ul li ul li a{padding:9px 5px 9px 35px;background:url(images/i_tinkhac.png) 19px 12px no-repeat;}
-div.wap_tin_them{width:33%;float:right;}
-div.wap_tin_them ul{list-style:none;}
-div.wap_tin_them ul li{padding:8px 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.1);}
-div.wap_tin_them ul li:last-child{border-bottom:none;}
-div.wap_tin_them ul li a img{width:80px;height:60px;object-fit:cover;border:2px solid #e2e2e2;border-radius:4px;float:left;margin-right:10px;}
-div.wap_tin_them ul li h4 a{text-decoration:none;color:#ffffff;font-size:13px;transition:0.4s;display:block;margin-bottom:5px;}
-div.wap_tin_them ul li h4 a:hover{color:#f1e00b;transition:0.4s;}
-div.wap_tin_them ul li p.mota{font-size:12px;color:#c9cbd6;line-height:1.4;margin:0;}
-div#tinmoi{width:30%;float:left;margin-left:2%;}
-div#tinmoi ul{list-style:none;}
-div#tinmoi ul li{padding:8px 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.1);}
+div#tinmoi{width:65%;float:left;margin-left:2%;}
+div#tinmoi ul{list-style:none;column-count:2;column-gap:20px;}
+div#tinmoi ul li{padding:8px 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.1);break-inside:avoid;-webkit-column-break-inside:avoid;}
 div#tinmoi ul li:last-child{border-bottom:none;}
 /* Was a vertical slick carousel (removed) with images left at height:auto - since the source
    thumbnails have wildly inconsistent native ratios (91-130px tall for the same ~170px width),
    letting the slider's computed slide height clip them cut off the bottom of taller ones and
    the description text below. Fixed-size + object-fit shows every photo whole, no cropping. */
 div#tinmoi ul li a img{width:80px;height:60px;object-fit:cover;border:2px solid #e2e2e2;border-radius:4px;float:left;margin-right:10px;}
-div#tinmoi ul li:nth-child(n+4){display:none;}
+div#tinmoi ul li:nth-child(n+7){display:none;}
 div#tinmoi ul li h4 a{text-decoration:none;color:#ffffff;font-size:13px;transition:0.4s;display:block;margin-bottom:5px;}
 div#tinmoi ul li h4 a:hover{color:#f1e00b;transition:0.4s;}
 div#tinmoi ul li p.mota{font-size:12px;color:#c9cbd6;line-height:1.4;margin:0;}
@@ -259,7 +251,7 @@ div.bb-custom-wrapper{width:90%;float:none;max-width:500px !important;margin:aut
 div.gioithieu .mota{float:none;width:100%;text-align:left;}
 div.wap_thuvien{float:left;width:100%;float:none;margin:auto;max-width:500px;}
 div#tinmoi{width:100%;float:none;margin-left:0;max-width:500px;margin:auto;}
-div.wap_tin_them{width:100%;float:none;margin-left:0;max-width:500px;margin:auto;}
+div#tinmoi ul{column-count:1;}
 div#main_footer{width:100%;}
 div#thongke{width:100%;}
 div.thongke_an{}
@@ -271,8 +263,6 @@ div.user{position:absolute;right:10px;top:0px;font-size:30px;color:#fff;cursor:p
 .menu_login{display:none;}
 div#tinmoi ul li{padding:10px 0;}
 div#tinmoi ul li a img{width:26%;height:60px;}
-div.wap_tin_them ul li{padding:10px 0;}
-div.wap_tin_them ul li a img{width:26%;height:60px;}
 .othernews ul.phantrang{margin-left:0;}
 }
 @media screen and (max-width:800px){}
