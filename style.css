@@ -20,12 +20,13 @@ svg.icon{width:1em;height:1em;fill:currentColor;display:inline-block;vertical-al
 img{max-width:100% !important;}
 div.bando img{max-width:none !important;}
 div.content{line-height:1.7;}
-div.content img{max-width:100%;height:auto !important;display:block;margin:20px auto;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,0.35);}
+div.content img{float:left;width:280px;height:320px !important;object-fit:cover;margin:4px 24px 16px 0;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,0.35);}
 div.content p{margin-bottom:16px;}
 div.content table{max-width:100%;}
-div.content h3{color:#f1e00b;font-size:19px;margin:26px 0 12px;font-family:'myFont';text-transform:uppercase;letter-spacing:0.5px;}
-div.content ul{margin:0 0 18px 0;padding-left:22px;}
+div.content h3{clear:both;color:#f1e00b;font-size:19px;margin:26px 0 12px;font-family:'myFont';text-transform:uppercase;letter-spacing:0.5px;}
+div.content ul{clear:both;margin:0 0 18px 0;padding-left:22px;}
 div.content li{margin-bottom:8px;}
+.othernews{clear:both;}
 body{font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.5;background:linear-gradient(180deg,#050810 0%,#0c1638 35%,#0a1230 70%,#05070f 100%);background-repeat:no-repeat;color:#fff; margin: 0; padding: 0; width:100%;}
 @font-face{font-family:'myFont';src:url('font/cambriab.ttf');}
 div#wapper{margin:auto;max-width:100%;}
@@ -296,6 +297,7 @@ div.box_news{width:100%;}
 .product_info{width:100%;margin-top:6px;}
 .gh_an{display:none;}
 div.gioithieu{padding:10px 0;}
+div.content img{float:none;width:100%;height:auto !important;margin:0 auto 16px;}
 }
 @media screen and (max-width:460px){div#wap_doitac{padding:7px 0;}
 div#doitac a img{height:60px;margin:0px 5px;}
