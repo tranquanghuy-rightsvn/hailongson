@@ -68,7 +68,7 @@ div#danhmuc ul li:last-child{border:none;}
 div#danhmuc ul li a{color:#454545;font-family:'myFont';text-decoration:none;font-size:14px;transition:0.4s;display:block;border-bottom:1px solid #DDD;padding:9px 5px 9px 20px;background:url(images/muiten.png) 4px 13px no-repeat;}
 div#danhmuc ul li a:hover{color:red;transition:0.4s;}
 div#danhmuc ul li ul li a{padding:9px 5px 9px 35px;background:url(images/i_tinkhac.png) 19px 12px no-repeat;}
-div#tinmoi{width:65%;float:left;margin-left:2%;}
+div#tinmoi{width:65%;margin-left:2%;display:flex;flex-direction:column;justify-content:flex-start;}
 div#tinmoi ul{list-style:none;column-count:2;column-gap:20px;}
 div#tinmoi ul li{padding:8px 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.1);break-inside:avoid;-webkit-column-break-inside:avoid;}
 div#tinmoi ul li:last-child{border-bottom:none;}
@@ -77,7 +77,6 @@ div#tinmoi ul li:last-child{border-bottom:none;}
    letting the slider's computed slide height clip them cut off the bottom of taller ones and
    the description text below. Fixed-size + object-fit shows every photo whole, no cropping. */
 div#tinmoi ul li a img{width:80px;height:60px;object-fit:cover;border:2px solid #e2e2e2;border-radius:4px;float:left;margin-right:10px;}
-div#tinmoi ul li:nth-child(n+7){display:none;}
 div#tinmoi ul li h4 a{text-decoration:none;color:#ffffff;font-size:13px;transition:0.4s;display:block;margin-bottom:5px;}
 div#tinmoi ul li h4 a:hover{color:#f1e00b;transition:0.4s;}
 div#tinmoi ul li p.mota{font-size:12px;color:#c9cbd6;line-height:1.4;margin:0;}
@@ -112,12 +111,20 @@ div.item .sp_gia{font-size:14px;}
 div.item .sp_gia span.giacu{color:#666666;text-decoration:line-through;float:left;}
 div.item .sp_gia span.giamoi{color:#666666;color:red;float:right;}
 div.item .sp_gia span.motgia{display:block;float:none;}
-div.wap_trangchu{padding:2%;max-width:100%;margin:15px auto;margin-bottom:20px;background:rgba(0,0,0,0.2);border:7px solid #2b385d;box-sizing:border-box;border-radius:4px;}
-div.wap_thuvien{float:left;width:33%;float:left;}
+div.wap_trangchu{display:flex;align-items:stretch;flex-wrap:wrap;padding:2%;max-width:100%;margin:15px auto;margin-bottom:20px;background:rgba(0,0,0,0.2);border:7px solid #2b385d;box-sizing:border-box;border-radius:4px;}
+div.wap_thuvien{width:33%;display:flex;flex-direction:column;}
+div.wap_thuvien .thuvien{flex:1;display:flex;flex-direction:column;justify-content:flex-start;}
 div.thuvien p{width:92%;margin:3% auto;position:relative;overflow:hidden;}
 div.thuvien p:before{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.5);content:'';-webkit-transition:-webkit-transform 0.6s;transition:transform 0.6s;-webkit-transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);}
 div.thuvien .item_tv:hover p:before{webkit-transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);transform:scale3d(2.2,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);}
 div.thuvien p a img{width:100%;aspect-ratio:3/2;object-fit:cover;border:3px solid #e2e2e2;box-sizing:border-box;}
+div.wap_box_new{display:flex;flex-wrap:wrap;justify-content:space-between;}
+div.box_news{width:48%;box-sizing:border-box;margin-bottom:30px;}
+div.box_news a img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px;display:block;border:2px solid #2b385d;box-sizing:border-box;}
+div.box_news h3{margin:12px 0 8px;font-size:18px;font-family:'myFont';text-transform:none;}
+div.box_news h3 a{color:#fff;text-decoration:none;}
+div.box_news h3 a:hover{color:#f1e00b;}
+div.box_news .mota{color:#c9cbd6;font-size:13px;line-height:1.6;}
 div#wap_footer{max-width:100%;background:url(images/footer.png) no-repeat; background-size:cover; border-top:1px solid #fff;padding-top:20px;margin:auto;border-top:7px solid #384063;}
 div#footer{max-width:100%;margin:auto;}
 div#main_footer{width:65%;float:left;}
@@ -283,6 +290,7 @@ div.item .sp_name a{font-size:14px;margin-bottom:5px;}
 div.item{width:100%;padding:2% 0;}
 div.wap_item:before{display:none;}
 .box_container,div.wap_trangchu{padding:15px 20px;}
+div.box_news{width:100%;}
 .zoom_slick{width:80%;max-width:400px;float:none;margin:auto;}
 .product_info{width:100%;margin-top:6px;}
 .gh_an{display:none;}
