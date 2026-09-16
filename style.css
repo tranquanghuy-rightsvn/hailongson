@@ -69,9 +69,9 @@ div#danhmuc ul li a{color:#454545;font-family:'myFont';text-decoration:none;font
 div#danhmuc ul li a:hover{color:red;transition:0.4s;}
 div#danhmuc ul li ul li a{padding:9px 5px 9px 35px;background:url(images/i_tinkhac.png) 19px 12px no-repeat;}
 div#tinmoi{width:65%;margin-left:2%;display:flex;flex-direction:column;justify-content:flex-start;}
-div#tinmoi ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);column-gap:20px;flex:1;align-content:space-between;}
+div#tinmoi ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);column-gap:20px;flex:1;align-content:space-between;}
 div#tinmoi ul li{padding:8px 0;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.1);}
-div#tinmoi ul li:nth-child(n+4){border-bottom:none;}
+div#tinmoi ul li:nth-child(n+5){border-bottom:none;}
 /* Was a vertical slick carousel (removed) with images left at height:auto - since the source
    thumbnails have wildly inconsistent native ratios (91-130px tall for the same ~170px width),
    letting the slider's computed slide height clip them cut off the bottom of taller ones and
