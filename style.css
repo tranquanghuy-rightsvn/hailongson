@@ -20,7 +20,8 @@ svg.icon{width:1em;height:1em;fill:currentColor;display:inline-block;vertical-al
 img{max-width:100% !important;}
 div.bando img{max-width:none !important;}
 div.content{line-height:1.7;}
-div.content img{float:left;width:280px;height:320px !important;object-fit:cover;margin:4px 24px 16px 0;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,0.35);}
+div.content img{clear:both;max-width:100%;height:auto !important;display:block;margin:20px auto;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,0.35);}
+div.content p:first-child img{clear:none;float:left;width:380px;max-width:46%;margin:4px 28px 16px 0;}
 div.content p{margin-bottom:16px;}
 div.content table{max-width:100%;}
 div.content h3{clear:both;color:#f1e00b;font-size:19px;margin:26px 0 12px;font-family:'myFont';text-transform:uppercase;letter-spacing:0.5px;}
@@ -297,7 +298,7 @@ div.box_news{width:100%;}
 .product_info{width:100%;margin-top:6px;}
 .gh_an{display:none;}
 div.gioithieu{padding:10px 0;}
-div.content img{float:none;width:100%;height:auto !important;margin:0 auto 16px;}
+div.content img,div.content p:first-child img{float:none;width:100%;max-width:100%;height:auto !important;margin:0 auto 16px;}
 }
 @media screen and (max-width:460px){div#wap_doitac{padding:7px 0;}
 div#doitac a img{height:60px;margin:0px 5px;}
