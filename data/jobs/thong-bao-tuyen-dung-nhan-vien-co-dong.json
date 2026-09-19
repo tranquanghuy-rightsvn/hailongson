@@ -1,0 +1,26 @@
+{
+  "slug": "thong-bao-tuyen-dung-nhan-vien-co-dong",
+  "title": "THÔNG BÁO TUYỂN NHÂN VIÊN CƠ ĐỘNG",
+  "seo_title": "Tuyển Nhân Viên Cơ Động | Hải Long Sơn",
+  "breadcrumb": "THÔNG BÁO TUYỂN NHÂN VIÊN CƠ ĐỘNG",
+  "description": "Tuyển dụng nhân viên cơ động, mức lương từ 7.000.000 đồng/tháng, tuần nghỉ 01 ngày. Liên hệ: 028 6257 3788",
+  "cover": "thong-bao-tuyen-dung-nhan-vien-co-dong-cover.jpg",
+  "cover_alt": "THÔNG BÁO TUYỂN NHÂN VIÊN CƠ ĐỘNG",
+  "created_at": "2026-09-20T00:00:00.000Z",
+  "updated_at": "2026-09-20T00:00:00.000Z",
+  "quantity_html": "<p>Số lượng: 05 người</p>",
+  "requirements_html": "<p>Ưu tiên: có kinh nghiệm</p>",
+  "location_html": "",
+  "salary_html": "<p>Mức lương: từ 7.000.000 đồng/tháng, tuần nghỉ 01 ngày</p>",
+  "contact_html": "<p>Mọi thông tin xin vui lòng liên hệ: 028 6257 3788</p>",
+  "intro_html": "<p>Công ty đang có nhu cầu tuyển dụng nhân viên cơ động</p>",
+  "date_posted": "2026-09-20",
+  "valid_through": "2026-12-19",
+  "openings": 5,
+  "salary_min": 7000000,
+  "salary_max": 0,
+  "locations": [
+    "Thành phố Hồ Chí Minh"
+  ],
+  "employment_type": "FULL_TIME"
+}

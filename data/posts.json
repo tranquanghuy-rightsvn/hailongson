@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "bao-ve-su-kien",
+    "title": "Bảo Vệ Sự Kiện - Giải Pháp An Ninh Toàn Diện Cho Mọi Quy Mô",
+    "description": "Giải pháp an ninh cho sự kiện mọi quy mô: khảo sát mặt bằng, kiểm soát ra vào, điều tiết đám đông và phối hợp PCCC cùng Hải Long Sơn.",
+    "date": "2026-09-20",
+    "cover": "bao-ve-su-kien-cover.jpg",
+    "cover_alt": "Bảo Vệ Sự Kiện - Giải Pháp An Ninh Toàn Diện Cho Mọi Quy Mô",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "nguoi-bao-ve",
+    "title": "Người Bảo Vệ - Nghề Của Sự Tận Tâm Và Trách Nhiệm",
+    "description": "Nghề bảo vệ đòi hỏi sự tận tâm, kỷ luật và trách nhiệm. Góc nhìn của Hải Long Sơn về công việc thầm lặng giữ bình yên cho mỗi mục tiêu.",
+    "date": "2026-09-20",
+    "cover": "nguoi-bao-ve-cover.jpg",
+    "cover_alt": "Người Bảo Vệ - Nghề Của Sự Tận Tâm Và Trách Nhiệm",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "thu-cam-on-cua-khach-hang",
+    "title": "Thư Cảm Ơn Từ Khách Hàng Vietravel Gửi Hải Long Sơn",
+    "description": "Vietravel gửi thư cảm ơn, ghi nhận chất lượng dịch vụ và tinh thần trách nhiệm của đội ngũ bảo vệ Hải Long Sơn.",
+    "date": "2026-09-20",
+    "cover": "thu-cam-on-cua-khach-hang-cover.jpg",
+    "cover_alt": "Thư Cảm Ơn Từ Khách Hàng Vietravel Gửi Hải Long Sơn",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "vai-tro-nha-lanh-dao-trong-viec-dan-dat-tap-the",
+    "title": "Vai Trò Người Lãnh Đạo Trong Đội Ngũ Bảo Vệ Chuyên Nghiệp",
+    "description": "Vai trò của đội trưởng, ca trưởng trong việc dẫn dắt, giữ vững kỷ luật và tinh thần đồng đội cho cả đội hình bảo vệ chuyên nghiệp.",
+    "date": "2026-09-20",
+    "cover": "vai-tro-nha-lanh-dao-trong-viec-dan-dat-tap-the-cover.jpg",
+    "cover_alt": "Vai Trò Người Lãnh Đạo Trong Đội Ngũ Bảo Vệ Chuyên Nghiệp",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "cong-ty-long-hai-to-chuc-dao-tao-nang-cao-nghiep-vu-bao-ve-cho-nhan-vien",
+    "title": "Hải Long Sơn Tổ Chức Đào Tạo Nâng Cao Nghiệp Vụ Cho Nhân Viên Bảo Vệ",
+    "description": "Nhằm nâng cao nghiệp vụ và chất lượng dịch vụ bảo vệ, Công ty Hải Long Sơn đã tổ chức lớp đào tạo chuyên sâu cho đội ngũ nhân viên",
+    "date": "2024-11-08",
+    "cover": "cong-ty-long-hai-to-chuc-dao-tao-nang-cao-nghiep-vu-bao-ve-cho-nhan-vien-cover.jpg",
+    "cover_alt": "Hải Long Sơn Tổ Chức Đào Tạo Nâng Cao Nghiệp Vụ Cho Nhân Viên Bảo Vệ",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "bao-ve-su-kien-ton-vinh-doi-tuyen-u23-viet-nam",
+    "title": "Hải Long Sơn Đảm Bảo An Ninh Sự Kiện Tôn Vinh Đội Tuyển U23 Việt Nam",
+    "description": "Hải Long Sơn đảm bảo an ninh cho sự kiện giao lưu giữa đội tuyển U23 Việt Nam và người hâm mộ tại Thành phố Hồ Chí Minh.",
+    "date": "2018-02-05",
+    "cover": "bao-ve-su-kien-ton-vinh-doi-tuyen-u23-viet-nam-cover.jpg",
+    "cover_alt": "Hải Long Sơn Đảm Bảo An Ninh Sự Kiện Tôn Vinh Đội Tuyển U23 Việt Nam",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  }
+]

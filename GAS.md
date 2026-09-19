@@ -402,6 +402,21 @@ cụ, skin CSS nạp từ `/vendor/tinymce/skins/`, editor cao đúng 460px.
 Actions build `html/` rồi commit; Cloudflare tự deploy khi có commit mới. Độ trễ từ lúc bấm Lưu
 tới lúc thấy trên site: khoảng 1–2 phút.
 
+**Đã migrate nội dung hiện có vào `data/` ngày 19/09/2026** (script một lần, không chạy lại):
+14 dịch vụ, 6 tin tức, 49 ảnh thư viện, 4 tin tuyển dụng. Trong lúc migrate đã:
+- Đổi tên ảnh bìa về quy ước tất định `<slug>-cover.jpg` (24 file) và ảnh trong nội dung về
+  `<slug>-content-<N>.jpg` — để xoá bản ghi dọn được sạch ảnh (mục IV).
+- Copy 49 ảnh thư viện từ `html/images/sites/` sang `html/images/gallery/`, tên đặt theo mô tả
+  ảnh, `alt` lấy từ thuộc tính `title` của chính trang thư viện.
+- Gỡ ảnh đầu ra khỏi `content_html` (nó đã thành ảnh bìa) để trang build ra không hiện trùng.
+- Chia nội dung 4 tin tuyển dụng thành section con theo chữ mở đầu đoạn ("Số lượng:", "Yêu
+  cầu:", "Khu vực làm việc:", "Mức lương:", "Liên hệ:"). Đã đối chiếu số ký tự trước/sau khi
+  chia: khớp 100%, không mất chữ. Tin `...nha-may` gốc chỉ có 1 đoạn nên nằm hết ở `intro_html`
+  — đúng thiết kế "section tuỳ chọn", không phải lỗi.
+
+⚠️ **`data/` phải được commit + push lên GitHub thì CMS mới đọc được** — `boot()` đọc
+`data/*.json` qua Contents API, chưa có trên nhánh `master` thì Admin hiện danh sách rỗng.
+
 ⚠️ **`html/` hiện CHƯA được track git** (`git ls-files html` trả rỗng) — phải commit `html/`
 trước khi CI chạy lần đầu, nếu không build không có gì để ghi đè lên.
 

@@ -1,0 +1,296 @@
+[
+  {
+    "file": "dien-tap-phong-chay-chua-chay-tai-doanh-nghiep.jpg",
+    "alt": "Diễn tập phòng cháy chữa cháy tại doanh nghiệp",
+    "order": 1,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-tac-phong-chuyen-nghiep.jpg",
+    "alt": "Nhân viên bảo vệ tác phong chuyên nghiệp",
+    "order": 2,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-chuyen-nghiep-tai-cac-trung-tam-toa-nha.jpg",
+    "alt": "Bảo vệ chuyên nghiệp tại các trung tâm, tòa nhà",
+    "order": 3,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-truc-chot-tai-cac-co-so-kinh-doanh.jpg",
+    "alt": "Bảo vệ trực chốt tại các cơ sở kinh doanh",
+    "order": 4,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chuyen-nghiep-tai-nha-may-khach-hang.jpg",
+    "alt": "Đội bảo vệ chuyên nghiệp tại nhà máy khách hàng",
+    "order": 5,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-truc-gac-cong-nha-may.jpg",
+    "alt": "Bảo vệ trực gác cổng nhà máy",
+    "order": 6,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-truc-ca-tai-phong-dieu-hanh.jpg",
+    "alt": "Nhân viên bảo vệ trực ca tại phòng điều hành",
+    "order": 7,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-dieu-tiet-giao-thong-ra-vao-nha-may.jpg",
+    "alt": "Bảo vệ điều tiết giao thông ra vào nhà máy",
+    "order": 8,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "dien-tap-xu-ly-su-co-chay-no.jpg",
+    "alt": "Diễn tập xử lý sự cố cháy nổ",
+    "order": 9,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-ngu-bao-ve-nghiem-tuc-ky-luat.jpg",
+    "alt": "Đội ngũ bảo vệ nghiêm túc, kỷ luật",
+    "order": 10,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-tuan-tra-tai-khu-vuc-khach-hang.jpg",
+    "alt": "Đội bảo vệ tuần tra tại khu vực khách hàng",
+    "order": 11,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "hinh-anh-gioi-thieu-dich-vu-bao-ve-hai-long-son.jpg",
+    "alt": "Hình ảnh giới thiệu dịch vụ bảo vệ Hải Long Sơn",
+    "order": 12,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chao-nghiem-tai-muc-tieu.jpg",
+    "alt": "Đội bảo vệ chào nghiêm tại mục tiêu",
+    "order": 13,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chao-nghiem-tai-khu-vuc-can-xe.jpg",
+    "alt": "Đội bảo vệ chào nghiêm tại khu vực cân xe",
+    "order": 14,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chao-nghiem-buoi-chieu-tai-chot-gac.jpg",
+    "alt": "Đội bảo vệ chào nghiêm buổi chiều tại chốt gác",
+    "order": 15,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-nam-nu-chao-nghiem-tai-chot-gac.jpg",
+    "alt": "Đội bảo vệ nam nữ chào nghiêm tại chốt gác",
+    "order": 16,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chao-nghiem-tai-khu-vuc-nha-may.jpg",
+    "alt": "Đội bảo vệ chào nghiêm tại khu vực nhà máy",
+    "order": 17,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chao-nghiem-tai-nha-may.jpg",
+    "alt": "Đội bảo vệ chào nghiêm tại nhà máy",
+    "order": 18,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chao-nghiem-tai-cong-ty-se-my.jpg",
+    "alt": "Đội bảo vệ chào nghiêm tại Công ty SE MY",
+    "order": 19,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-chao-nghiem-truoc-van-phong-tuyen-dung.jpg",
+    "alt": "Đội bảo vệ chào nghiêm trước văn phòng tuyển dụng",
+    "order": 20,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-tai-cong-don-vi.jpg",
+    "alt": "Đội bảo vệ tại cổng đơn vị",
+    "order": 21,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-truc-gac-cong-nha-may.jpg",
+    "alt": "Đội bảo vệ trực gác cổng nhà máy",
+    "order": 22,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-nghiem-tuc-tai-vi-tri-gac-cong.jpg",
+    "alt": "Nhân viên bảo vệ nghiêm túc tại vị trí gác cổng",
+    "order": 23,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-tai-cong-truong-du-an-quan-chi.jpg",
+    "alt": "Đội bảo vệ tại công trường dự án Quân Chí",
+    "order": 24,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-tap-hop-diem-danh-tai-chot-gac.jpg",
+    "alt": "Đội bảo vệ tập hợp điểm danh tại chốt gác",
+    "order": 25,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-diem-danh-buoi-toi-tai-phong-bao-ve.jpg",
+    "alt": "Đội bảo vệ điểm danh buổi tối tại phòng bảo vệ",
+    "order": 26,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-dien-tap-su-dung-binh-chua-chay.jpg",
+    "alt": "Nhân viên bảo vệ diễn tập sử dụng bình chữa cháy",
+    "order": 27,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "luc-luong-chuc-nang-huong-dan-dien-tap-phong-chay-chua-chay.jpg",
+    "alt": "Lực lượng chức năng hướng dẫn diễn tập phòng cháy chữa cháy",
+    "order": 28,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-phoi-hop-dien-tap-phong-chay-chua-chay.jpg",
+    "alt": "Đội bảo vệ phối hợp diễn tập phòng cháy chữa cháy",
+    "order": 29,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-dieu-tiet-xe-ra-vao-cong.jpg",
+    "alt": "Bảo vệ điều tiết xe ra vào cổng",
+    "order": 30,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-hinh-nhan-vien-bao-ve-truoc-toa-nha.jpg",
+    "alt": "Đội hình nhân viên bảo vệ trước tòa nhà",
+    "order": 31,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-tai-du-an-can-ho-stc-group.jpg",
+    "alt": "Đội bảo vệ tại dự án căn hộ STC Group",
+    "order": 32,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-ghi-nhan-so-truc-tai-vong-gac.jpg",
+    "alt": "Nhân viên bảo vệ ghi nhận sổ trực tại vọng gác",
+    "order": 33,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-tai-khu-vuc-kho-van.jpg",
+    "alt": "Đội bảo vệ tại khu vực kho vận",
+    "order": 34,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-kiem-soat-xe-ra-vao-cong.jpg",
+    "alt": "Bảo vệ kiểm soát xe ra vào cổng",
+    "order": 35,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-kiem-soat-nguoi-va-phuong-tien-ra-vao.jpg",
+    "alt": "Bảo vệ kiểm soát người và phương tiện ra vào",
+    "order": 36,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-kiem-tra-an-ninh-tai-cua-nha-may.jpg",
+    "alt": "Bảo vệ kiểm tra an ninh tại cửa nhà máy",
+    "order": 37,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-truc-gac-tai-cong-ty-tnhh-ky-vina.jpg",
+    "alt": "Đội bảo vệ trực gác tại Công ty TNHH KY VINA",
+    "order": 38,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-tham-du-le-cung-dau-nam-tai-cong-ty.jpg",
+    "alt": "Nhân viên tham dự lễ cúng đầu năm tại công ty",
+    "order": 39,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-luyen-tap-nghiep-vu-tai-cong.jpg",
+    "alt": "Nhân viên bảo vệ luyện tập nghiệp vụ tại cổng",
+    "order": 40,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-truc-gac-tai-nha-rieng.jpg",
+    "alt": "Bảo vệ trực gác tại nhà riêng",
+    "order": 41,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "bao-ve-truc-gac-tai-nha-may-tan-uyen-binh-duong.jpg",
+    "alt": "Bảo vệ trực gác tại nhà máy - Tân Uyên, Bình Dương",
+    "order": 42,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "to-bao-ve-truc-gac-tai-nha-may.jpg",
+    "alt": "Tổ bảo vệ trực gác tại nhà máy",
+    "order": 43,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "to-bao-ve-truc-gac-tai-hoa-loi-ben-cat-binh-duong.jpg",
+    "alt": "Tổ bảo vệ trực gác tại Hòa Lợi, Bến Cát, Bình Dương",
+    "order": 44,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-truc-lien-lac-bo-dam.jpg",
+    "alt": "Nhân viên bảo vệ trực liên lạc bộ đàm",
+    "order": 45,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-ghi-so-truc-tai-cong.jpg",
+    "alt": "Nhân viên bảo vệ ghi sổ trực tại cổng",
+    "order": 46,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "doi-bao-ve-truc-gac-tai-van-phong-chinh.jpg",
+    "alt": "Đội bảo vệ trực gác tại văn phòng chính",
+    "order": 47,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-tuan-tra-tai-kho-hang.jpg",
+    "alt": "Nhân viên bảo vệ tuần tra tại kho hàng",
+    "order": 48,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "file": "nhan-vien-bao-ve-tuan-tra-tai-kho-hang-2.jpg",
+    "alt": "Nhân viên bảo vệ tuần tra tại kho hàng",
+    "order": 49,
+    "created_at": "2026-09-20T00:00:00.000Z"
+  }
+]

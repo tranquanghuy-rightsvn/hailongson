@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "thong-bao-tuyen-dung-nhan-vien-bao-ve-chuyen-nghiep",
+    "title": "THÔNG BÁO TUYỂN DỤNG NHÂN VIÊN BẢO VỆ CHUYÊN NGHIỆP",
+    "description": "Do nhu cầu phát triển - công ty TNHH dịch vụ bảo vệ chuyên nghiệp Hải Long Sơn thường xuyên có nhu cầu tuyển dụng nhân viên bảo vệ.",
+    "date_posted": "2026-09-20",
+    "valid_through": "2026-12-19",
+    "openings": 20,
+    "locations": [
+      "Thành phố Hồ Chí Minh",
+      "Bình Dương",
+      "Đồng Nai",
+      "Long An"
+    ],
+    "cover": "thong-bao-tuyen-dung-nhan-vien-bao-ve-chuyen-nghiep-cover.jpg",
+    "cover_alt": "THÔNG BÁO TUYỂN DỤNG NHÂN VIÊN BẢO VỆ CHUYÊN NGHIỆP",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "thong-bao-tuyen-dung-nhan-vien-co-dong",
+    "title": "THÔNG BÁO TUYỂN NHÂN VIÊN CƠ ĐỘNG",
+    "description": "Tuyển dụng nhân viên cơ động, mức lương từ 7.000.000 đồng/tháng, tuần nghỉ 01 ngày. Liên hệ: 028 6257 3788",
+    "date_posted": "2026-09-20",
+    "valid_through": "2026-12-19",
+    "openings": 5,
+    "locations": [
+      "Thành phố Hồ Chí Minh"
+    ],
+    "cover": "thong-bao-tuyen-dung-nhan-vien-co-dong-cover.jpg",
+    "cover_alt": "THÔNG BÁO TUYỂN NHÂN VIÊN CƠ ĐỘNG",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "thong-bao-tuyen-nhan-vien-bao-ve-nha-may",
+    "title": "THÔNG BÁO TUYỂN NHÂN VIÊN BẢO VỆ NHÀ MÁY",
+    "description": "Tuyển dụng nhân viên bảo vệ nhà máy, số lượng 10 nam + 10 nữ, mức lương: 5.500.000 -7.000.000 đồng/tháng, bao ăn ở. Khu vực làm việc Tp. HCM và các tỉnh lân…",
+    "date_posted": "2026-09-20",
+    "valid_through": "2026-12-19",
+    "openings": 20,
+    "locations": [
+      "Thành phố Hồ Chí Minh"
+    ],
+    "cover": "thong-bao-tuyen-nhan-vien-bao-ve-nha-may-cover.jpg",
+    "cover_alt": "THÔNG BÁO TUYỂN NHÂN VIÊN BẢO VỆ NHÀ MÁY",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "slug": "tuyen-dung-nhan-vien-bao-ve",
+    "title": "THÔNG BÁO TUYỂN DỤNG NHÂN VIÊN BẢO VỆ",
+    "description": "Tuyển dụng nhân viên bảo vệ với mức lương từ 7.000.000 đồng - 9.000.000 đồng, ca 12h/ngày, tuần nghỉ 01 ngày, bao ăn- ở. Liên hệ: 028 6257 3788",
+    "date_posted": "2026-09-20",
+    "valid_through": "2026-12-19",
+    "openings": 6,
+    "locations": [
+      "Thành phố Hồ Chí Minh"
+    ],
+    "cover": "tuyen-dung-nhan-vien-bao-ve-cover.jpg",
+    "cover_alt": "THÔNG BÁO TUYỂN DỤNG NHÂN VIÊN BẢO VỆ",
+    "updated_at": "2026-09-20T00:00:00.000Z"
+  }
+]
