@@ -369,6 +369,33 @@ dẫn CỐ ĐỊNH, đổi phải sửa luôn `scripts/build.py` + CI:
 
 **File index tổng LUÔN ghi SAU CÙNG** trong 1 thao tác (nó là file trigger CI).
 
+**Bộ build (làm xong 19/09/2026)**:
+- `templates/` — 7 file: `service.html`, `post.html`, `job.html`, `service-list.html`,
+  `post-list.html`, `job-list.html`, `gallery.html`. **ĐÂY LÀ CHỖ SỬA GIAO DIỆN.**
+- `scripts/make_templates.py` — sinh templates TỪ chính trang thật. Chạy 1 lần lúc migrate.
+  ⚠️ Có chốt an toàn: từ chối chạy nếu `html/` đã là sản phẩm của `build.py` (bug thật đã gặp:
+  sinh template từ trang đã build lỗi → menu bị cắt sai, vỡ dây chuyền).
+- `scripts/build.py` — dựng `html/` từ `data/` + `templates/`. So nội dung trước khi ghi nên
+  chỉ đụng file thật sự đổi.
+- `.github/workflows/build.yml` — CI, chỉ trigger theo 4 file index tổng + `templates/` +
+  `build.py`, KHÔNG theo `data/**` (tránh build ở commit dở dang).
+
+**Mốc neo menu dịch vụ**: `<!-- NAV_SERVICES_START -->` / `<!-- NAV_SERVICES_END -->` nằm BÊN
+TRONG `<ul>` của submenu "Dịch vụ", có ở CẢ 2 menu (máy tính + điện thoại).
+⚠️ 2 bug thật đã gặp khi dựng, đừng lặp lại:
+(a) Chèn mốc ngay sau `<div id="wap_menu">` → các `<li>` nằm ngoài `<ul>`, đổ thành chữ trần
+    ở đầu trang.
+(b) Dùng regex non-greedy `.*?</ul>` để khoét submenu → dừng ở `<ul></ul>` rỗng lồng trong
+    `<li>` đầu tiên (chỗ dành cho menu cấp 3) → cắt sai, vỡ cả thanh menu. Phải ĐẾM ĐỘ SÂU thẻ.
+
+**Dấu nhận biết trang do build sinh**: `<!-- build.py:generated -->` ngay sau `<html>`.
+`build.py` chỉ xoá trang mồ côi có dấu này — trang viết tay (`/`, `/gioi-thieu/`, `/lien-he/`,
+`/admin/`) không bao giờ bị đụng. Đã test thật: xoá 1 bản ghi khỏi index → build dọn đúng
+trang đó, 4 trang viết tay còn nguyên.
+
+**Ảnh bìa vẽ ở ĐẦU nội dung** (`cover_html` trong `build.py`). Lúc migrate, ảnh đầu đã được gỡ
+khỏi `content_html` và chuyển thành ảnh bìa riêng — build không vẽ lại là trang mất ảnh minh hoạ.
+
 **Ai ghi / ai sửa được:**
 
 | Thư mục | Ai ghi | Sửa tay được? |

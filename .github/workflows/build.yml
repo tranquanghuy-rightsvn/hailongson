@@ -1,0 +1,51 @@
+# Dựng lại html/ từ data/ mỗi khi CMS ghi dữ liệu mới.
+#
+# ⚠️ CHỈ theo dõi 4 file index tổng, KHÔNG theo dõi cả data/**. Lý do: mỗi thao tác Lưu trong
+# CMS ghi NHIỀU file liên tiếp (chi tiết trước, index sau cùng). Trigger theo data/** sẽ chạy
+# build ngay ở commit dở dang - trang dựng ra thiếu dữ liệu. File index luôn được ghi SAU CÙNG
+# nên nó là mốc "đã ghi xong" (xem GAS.md mục X).
+name: Build site
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'data/posts.json'
+      - 'data/services.json'
+      - 'data/gallery.json'
+      - 'data/jobs.json'
+      - 'templates/**'
+      - 'scripts/build.py'
+  workflow_dispatch:
+
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Dựng html/ từ data/
+        run: python3 scripts/build.py
+
+      - name: Commit nếu có thay đổi
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add html/
+          if git diff --cached --quiet; then
+            echo "Không có gì đổi, bỏ qua commit."
+          else
+            git commit -m "build: dựng lại site từ data/ [skip ci]"
+            git push
+          fi
